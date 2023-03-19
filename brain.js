@@ -22,11 +22,14 @@ class Observe extends EventEmitter {
 			console.log(r.data);
 			/// Tiến hành remote đến target
 			console.log("Lệnh 3");
-			cmd.runSync("git remote add origin https://github.com/baolam/ai-document.git");
+			r = cmd.runSync("git remote add origin https://github.com/baolam/ai-document.git");
+			console.log(r.data);
+			console.log("Lệnh 4");
+			cmd.runSync("git checkout -b main");
 			console.log(r.data);
 			/// Tiến hành push
-			console.log("Lệnh 4");
-			cmd.runSync("git push origin main");
+			console.log("Lệnh 5");
+			r = cmd.runSync("git push origin main");
 			console.log(r.data);
 			/// Thông báo đến người dùng
 			notifier.notify("Cập nhật dữ liệu thành công");
@@ -37,6 +40,7 @@ class Observe extends EventEmitter {
 	{
 		let my_watch = chokidar.watch(targetFolder, { persistent : true });
 		my_watch.on("change", (_path) => {
+			console.log(_path);
 			notifier.notify({
 				title : "Từ dịch vụ cập nhật kết quả lên git",
 				message : "Nhấn thẳng vào thông báo để tiến hành cập nhật. Nếu không muốn hãy nhấn chính xác vào dấu x hoặc đợi sau " + this.timeout + " giây.",
