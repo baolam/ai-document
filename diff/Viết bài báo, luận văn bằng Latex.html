@@ -1,0 +1,3341 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://tuanubicom.blogspot.com/2012/10/writinginlatex.html -->
+<html dir="ltr" lang="vi" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Viết bài báo, luận văn bằng Latex </title>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta content="#f7f7f7" name="theme-color">
+<!-- Windows Phone -->
+<meta content="#f7f7f7" name="msapplication-navbutton-color">
+<meta content="blogger" name="generator">
+<link href="https://tuanubicom.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="Hạnh phúc là trải nghiệm trong cuộc hành trình - Atom" href="https://tuanubicom.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="Hạnh phúc là trải nghiệm trong cuộc hành trình - RSS" href="https://tuanubicom.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="Hạnh phúc là trải nghiệm trong cuộc hành trình - Atom" href="https://www.blogger.com/feeds/3277552449392957334/posts/default">
+
+<link rel="alternate" type="application/atom+xml" title="Hạnh phúc là trải nghiệm trong cuộc hành trình - Atom" href="https://tuanubicom.blogspot.com/feeds/3703677968946293052/comments/default">
+<!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+<link href="http://3.bp.blogspot.com/-afbjZgxFM7g/UIKeINVl0UI/AAAAAAAABlQ/xriDG9XzTu4/s1600/LaTeX_Logo.png" rel="image_src">
+<meta content="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" property="og:url">
+<meta content="Viết bài báo, luận văn bằng Latex " property="og:title">
+<meta content="     Latex là một ngôn ngữ định dạng văn bản dùng để sinh ra tài liệu phục vụ xuất bản, in ấn. Latex đặc biệt được sử dụng rộng rãi trong gi..." property="og:description">
+<meta content="//3.bp.blogspot.com/-afbjZgxFM7g/UIKeINVl0UI/AAAAAAAABlQ/xriDG9XzTu4/w1200-h630-p-k-no-nu/LaTeX_Logo.png" property="og:image">
+<style type="text/css">@font-face{font-family:'Merriweather';font-style:italic;font-weight:300;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff1jvzRPA.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:300;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff8jvzRPA.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:300;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff3jvzRPA.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:300;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff2jvzRPA.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:300;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvw.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4m0qyriQwlOrhSvowK_l5-eRZDf-LHrw.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4m0qyriQwlOrhSvowK_l5-eRZKf-LHrw.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4m0qyriQwlOrhSvowK_l5-eRZBf-LHrw.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4m0qyriQwlOrhSvowK_l5-eRZAf-LHrw.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Merriweather';font-style:italic;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-4m0qyriQwlOrhSvowK_l5-eRZOf-I.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5-cSZMZ-Y.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5-eCZMZ-Y.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5-cyZMZ-Y.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5-ciZMZ-Y.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Merriweather';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5-fCZM.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcg72j00.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKew72j00.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcw72j00.woff2)format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfA72j00.woff2)format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcQ72j00.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvWyNL4U.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jtGyNL4U.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvGyNL4U.woff2)format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3js2yNL4U.woff2)format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvmyNL4U.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jsGyN.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvWyNL4U.woff2)format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjtGyNL4U.woff2)format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvGyNL4U.woff2)format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjs2yNL4U.woff2)format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvmyNL4U.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;src:url(//fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyN.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}</style>
+<style id="page-skin-1" type="text/css"><!--
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/*!************************************************
+* Blogger Template Style
+* Name: Emporio
+**************************************************/
+body{
+overflow-wrap:break-word;
+word-break:break-word;
+word-wrap:break-word
+}
+.hidden{
+display:none
+}
+.invisible{
+visibility:hidden
+}
+.container::after,.float-container::after{
+clear:both;
+content:"";
+display:table
+}
+.clearboth{
+clear:both
+}
+#comments .comment .comment-actions,.subscribe-popup .FollowByEmail .follow-by-email-submit{
+background:0 0;
+border:0;
+box-shadow:none;
+color:#729c0b;
+cursor:pointer;
+font-size:14px;
+font-weight:700;
+outline:0;
+text-decoration:none;
+text-transform:uppercase;
+width:auto
+}
+.dim-overlay{
+background-color:rgba(0,0,0,.54);
+height:100vh;
+left:0;
+position:fixed;
+top:0;
+width:100%
+}
+#sharing-dim-overlay{
+background-color:transparent
+}
+input::-ms-clear{
+display:none
+}
+.blogger-logo,.svg-icon-24.blogger-logo{
+fill:#ff9800;
+opacity:1
+}
+.skip-navigation{
+background-color:#fff;
+box-sizing:border-box;
+color:#000;
+display:block;
+height:0;
+left:0;
+line-height:50px;
+overflow:hidden;
+padding-top:0;
+position:fixed;
+text-align:center;
+top:0;
+-webkit-transition:box-shadow .3s,height .3s,padding-top .3s;
+transition:box-shadow .3s,height .3s,padding-top .3s;
+width:100%;
+z-index:900
+}
+.skip-navigation:focus{
+box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+height:50px
+}
+#main{
+outline:0
+}
+.main-heading{
+position:absolute;
+clip:rect(1px,1px,1px,1px);
+padding:0;
+border:0;
+height:1px;
+width:1px;
+overflow:hidden
+}
+.Attribution{
+margin-top:1em;
+text-align:center
+}
+.Attribution .blogger img,.Attribution .blogger svg{
+vertical-align:bottom
+}
+.Attribution .blogger img{
+margin-right:.5em
+}
+.Attribution div{
+line-height:24px;
+margin-top:.5em
+}
+.Attribution .copyright,.Attribution .image-attribution{
+font-size:.7em;
+margin-top:1.5em
+}
+.BLOG_mobile_video_class{
+display:none
+}
+.bg-photo{
+background-attachment:scroll!important
+}
+body .CSS_LIGHTBOX{
+z-index:900
+}
+.extendable .show-less,.extendable .show-more{
+border-color:#729c0b;
+color:#729c0b;
+margin-top:8px
+}
+.extendable .show-less.hidden,.extendable .show-more.hidden{
+display:none
+}
+.inline-ad{
+display:none;
+max-width:100%;
+overflow:hidden
+}
+.adsbygoogle{
+display:block
+}
+#cookieChoiceInfo{
+bottom:0;
+top:auto
+}
+iframe.b-hbp-video{
+border:0
+}
+.post-body img{
+max-width:100%
+}
+.post-body iframe{
+max-width:100%
+}
+.post-body a[imageanchor="1"]{
+display:inline-block
+}
+.byline{
+margin-right:1em
+}
+.byline:last-child{
+margin-right:0
+}
+.link-copied-dialog{
+max-width:520px;
+outline:0
+}
+.link-copied-dialog .modal-dialog-buttons{
+margin-top:8px
+}
+.link-copied-dialog .goog-buttonset-default{
+background:0 0;
+border:0
+}
+.link-copied-dialog .goog-buttonset-default:focus{
+outline:0
+}
+.paging-control-container{
+margin-bottom:16px
+}
+.paging-control-container .paging-control{
+display:inline-block
+}
+.paging-control-container .comment-range-text::after,.paging-control-container .paging-control{
+color:#729c0b
+}
+.paging-control-container .comment-range-text,.paging-control-container .paging-control{
+margin-right:8px
+}
+.paging-control-container .comment-range-text::after,.paging-control-container .paging-control::after{
+content:"\b7";
+cursor:default;
+padding-left:8px;
+pointer-events:none
+}
+.paging-control-container .comment-range-text:last-child::after,.paging-control-container .paging-control:last-child::after{
+content:none
+}
+.byline.reactions iframe{
+height:20px
+}
+.b-notification{
+color:#000;
+background-color:#fff;
+border-bottom:solid 1px #000;
+box-sizing:border-box;
+padding:16px 32px;
+text-align:center
+}
+.b-notification.visible{
+-webkit-transition:margin-top .3s cubic-bezier(.4,0,.2,1);
+transition:margin-top .3s cubic-bezier(.4,0,.2,1)
+}
+.b-notification.invisible{
+position:absolute
+}
+.b-notification-close{
+position:absolute;
+right:8px;
+top:8px
+}
+.no-posts-message{
+line-height:40px;
+text-align:center
+}
+@media screen and (max-width:745px){
+body.item-view .post-body a[imageanchor="1"][style*="float: left;"],body.item-view .post-body a[imageanchor="1"][style*="float: right;"]{
+float:none!important;
+clear:none!important
+}
+body.item-view .post-body a[imageanchor="1"] img{
+display:block;
+height:auto;
+margin:0 auto
+}
+body.item-view .post-body>.separator:first-child>a[imageanchor="1"]:first-child{
+margin-top:20px
+}
+.post-body a[imageanchor]{
+display:block
+}
+body.item-view .post-body a[imageanchor="1"]{
+margin-left:0!important;
+margin-right:0!important
+}
+body.item-view .post-body a[imageanchor="1"]+a[imageanchor="1"]{
+margin-top:16px
+}
+}
+.item-control{
+display:none
+}
+#comments{
+border-top:1px dashed rgba(0,0,0,.54);
+margin-top:20px;
+padding:20px
+}
+#comments .comment-thread ol{
+margin:0;
+padding-left:0;
+padding-left:0
+}
+#comments .comment .comment-replybox-single,#comments .comment-thread .comment-replies{
+margin-left:60px
+}
+#comments .comment-thread .thread-count{
+display:none
+}
+#comments .comment{
+list-style-type:none;
+padding:0 0 30px;
+position:relative
+}
+#comments .comment .comment{
+padding-bottom:8px
+}
+.comment .avatar-image-container{
+position:absolute
+}
+.comment .avatar-image-container img{
+border-radius:50%
+}
+.avatar-image-container svg,.comment .avatar-image-container .avatar-icon{
+border-radius:50%;
+border:solid 1px #729c0b;
+box-sizing:border-box;
+fill:#729c0b;
+height:35px;
+margin:0;
+padding:7px;
+width:35px
+}
+.comment .comment-block{
+margin-top:10px;
+margin-left:60px;
+padding-bottom:0
+}
+#comments .comment-author-header-wrapper{
+margin-left:40px
+}
+#comments .comment .thread-expanded .comment-block{
+padding-bottom:20px
+}
+#comments .comment .comment-header .user,#comments .comment .comment-header .user a{
+color:#212121;
+font-style:normal;
+font-weight:700
+}
+#comments .comment .comment-actions{
+bottom:0;
+margin-bottom:15px;
+position:absolute
+}
+#comments .comment .comment-actions>*{
+margin-right:8px
+}
+#comments .comment .comment-header .datetime{
+bottom:0;
+color:rgba(33,33,33,.54);
+display:inline-block;
+font-size:13px;
+font-style:italic;
+margin-left:8px
+}
+#comments .comment .comment-footer .comment-timestamp a,#comments .comment .comment-header .datetime a{
+color:rgba(33,33,33,.54)
+}
+#comments .comment .comment-content,.comment .comment-body{
+margin-top:12px;
+word-break:break-word
+}
+.comment-body{
+margin-bottom:12px
+}
+#comments.embed[data-num-comments="0"]{
+border:0;
+margin-top:0;
+padding-top:0
+}
+#comments.embed[data-num-comments="0"] #comment-post-message,#comments.embed[data-num-comments="0"] div.comment-form>p,#comments.embed[data-num-comments="0"] p.comment-footer{
+display:none
+}
+#comment-editor-src{
+display:none
+}
+.comments .comments-content .loadmore.loaded{
+max-height:0;
+opacity:0;
+overflow:hidden
+}
+.extendable .remaining-items{
+height:0;
+overflow:hidden;
+-webkit-transition:height .3s cubic-bezier(.4,0,.2,1);
+transition:height .3s cubic-bezier(.4,0,.2,1)
+}
+.extendable .remaining-items.expanded{
+height:auto
+}
+.svg-icon-24,.svg-icon-24-button{
+cursor:pointer;
+height:24px;
+width:24px;
+min-width:24px
+}
+.touch-icon{
+margin:-12px;
+padding:12px
+}
+.touch-icon:active,.touch-icon:focus{
+background-color:rgba(153,153,153,.4);
+border-radius:50%
+}
+svg:not(:root).touch-icon{
+overflow:visible
+}
+html[dir=rtl] .rtl-reversible-icon{
+-webkit-transform:scaleX(-1);
+-ms-transform:scaleX(-1);
+transform:scaleX(-1)
+}
+.svg-icon-24-button,.touch-icon-button{
+background:0 0;
+border:0;
+margin:0;
+outline:0;
+padding:0
+}
+.touch-icon-button .touch-icon:active,.touch-icon-button .touch-icon:focus{
+background-color:transparent
+}
+.touch-icon-button:active .touch-icon,.touch-icon-button:focus .touch-icon{
+background-color:rgba(153,153,153,.4);
+border-radius:50%
+}
+.Profile .default-avatar-wrapper .avatar-icon{
+border-radius:50%;
+border:solid 1px #729c0b;
+box-sizing:border-box;
+fill:#729c0b;
+margin:0
+}
+.Profile .individual .default-avatar-wrapper .avatar-icon{
+padding:25px
+}
+.Profile .individual .avatar-icon,.Profile .individual .profile-img{
+height:90px;
+width:90px
+}
+.Profile .team .default-avatar-wrapper .avatar-icon{
+padding:8px
+}
+.Profile .team .avatar-icon,.Profile .team .default-avatar-wrapper,.Profile .team .profile-img{
+height:40px;
+width:40px
+}
+.snippet-container{
+margin:0;
+position:relative;
+overflow:hidden
+}
+.snippet-fade{
+bottom:0;
+box-sizing:border-box;
+position:absolute;
+width:96px
+}
+.snippet-fade{
+right:0
+}
+.snippet-fade:after{
+content:"\2026"
+}
+.snippet-fade:after{
+float:right
+}
+.centered-top-container.sticky{
+left:0;
+position:fixed;
+right:0;
+top:0;
+width:auto;
+z-index:8;
+-webkit-transition-property:opacity,-webkit-transform;
+transition-property:opacity,-webkit-transform;
+transition-property:transform,opacity;
+transition-property:transform,opacity,-webkit-transform;
+-webkit-transition-duration:.2s;
+transition-duration:.2s;
+-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);
+transition-timing-function:cubic-bezier(.4,0,.2,1)
+}
+.centered-top-placeholder{
+display:none
+}
+.collapsed-header .centered-top-placeholder{
+display:block
+}
+.centered-top-container .Header .replaced h1,.centered-top-placeholder .Header .replaced h1{
+display:none
+}
+.centered-top-container.sticky .Header .replaced h1{
+display:block
+}
+.centered-top-container.sticky .Header .header-widget{
+background:0 0
+}
+.centered-top-container.sticky .Header .header-image-wrapper{
+display:none
+}
+.centered-top-container img,.centered-top-placeholder img{
+max-width:100%
+}
+.collapsible{
+-webkit-transition:height .3s cubic-bezier(.4,0,.2,1);
+transition:height .3s cubic-bezier(.4,0,.2,1)
+}
+.collapsible,.collapsible>summary{
+display:block;
+overflow:hidden
+}
+.collapsible>:not(summary){
+display:none
+}
+.collapsible[open]>:not(summary){
+display:block
+}
+.collapsible:focus,.collapsible>summary:focus{
+outline:0
+}
+.collapsible>summary{
+cursor:pointer;
+display:block;
+padding:0
+}
+.collapsible:focus>summary,.collapsible>summary:focus{
+background-color:transparent
+}
+.collapsible>summary::-webkit-details-marker{
+display:none
+}
+.collapsible-title{
+-webkit-box-align:center;
+-webkit-align-items:center;
+-ms-flex-align:center;
+align-items:center;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex
+}
+.collapsible-title .title{
+-webkit-box-flex:1;
+-webkit-flex:1 1 auto;
+-ms-flex:1 1 auto;
+flex:1 1 auto;
+-webkit-box-ordinal-group:1;
+-webkit-order:0;
+-ms-flex-order:0;
+order:0;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap
+}
+.collapsible-title .chevron-down,.collapsible[open] .collapsible-title .chevron-up{
+display:block
+}
+.collapsible-title .chevron-up,.collapsible[open] .collapsible-title .chevron-down{
+display:none
+}
+.flat-button{
+cursor:pointer;
+display:inline-block;
+font-weight:700;
+text-transform:uppercase;
+border-radius:2px;
+padding:8px;
+margin:-8px
+}
+.flat-icon-button{
+background:0 0;
+border:0;
+margin:0;
+outline:0;
+padding:0;
+margin:-12px;
+padding:12px;
+cursor:pointer;
+box-sizing:content-box;
+display:inline-block;
+line-height:0
+}
+.flat-icon-button,.flat-icon-button .splash-wrapper{
+border-radius:50%
+}
+.flat-icon-button .splash.animate{
+-webkit-animation-duration:.3s;
+animation-duration:.3s
+}
+body#layout .bg-photo,body#layout .bg-photo-overlay{
+display:none
+}
+body#layout .page_body{
+padding:0;
+position:relative;
+top:0
+}
+body#layout .page{
+display:inline-block;
+left:inherit;
+position:relative;
+vertical-align:top;
+width:540px
+}
+body#layout .centered{
+max-width:954px
+}
+body#layout .navigation{
+display:none
+}
+body#layout .sidebar-container{
+display:inline-block;
+width:40%
+}
+body#layout .hamburger-menu,body#layout .search{
+display:none
+}
+.overflowable-container{
+max-height:44px;
+overflow:hidden;
+position:relative
+}
+.overflow-button{
+cursor:pointer
+}
+#overflowable-dim-overlay{
+background:0 0
+}
+.overflow-popup{
+box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+background-color:#ffffff;
+left:0;
+max-width:calc(100% - 32px);
+position:absolute;
+top:0;
+visibility:hidden;
+z-index:101
+}
+.overflow-popup ul{
+list-style:none
+}
+.overflow-popup .tabs li,.overflow-popup li{
+display:block;
+height:auto
+}
+.overflow-popup .tabs li{
+padding-left:0;
+padding-right:0
+}
+.overflow-button.hidden,.overflow-popup .tabs li.hidden,.overflow-popup li.hidden{
+display:none
+}
+.widget.Sharing .sharing-button{
+display:none
+}
+.widget.Sharing .sharing-buttons li{
+padding:0
+}
+.widget.Sharing .sharing-buttons li span{
+display:none
+}
+.post-share-buttons{
+position:relative
+}
+.centered-bottom .share-buttons .svg-icon-24,.share-buttons .svg-icon-24{
+fill:#729c0b
+}
+.sharing-open.touch-icon-button:active .touch-icon,.sharing-open.touch-icon-button:focus .touch-icon{
+background-color:transparent
+}
+.share-buttons{
+background-color:#ffffff;
+border-radius:2px;
+box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+color:#000000;
+list-style:none;
+margin:0;
+padding:8px 0;
+position:absolute;
+top:-11px;
+min-width:200px;
+z-index:101
+}
+.share-buttons.hidden{
+display:none
+}
+.sharing-button{
+background:0 0;
+border:0;
+margin:0;
+outline:0;
+padding:0;
+cursor:pointer
+}
+.share-buttons li{
+margin:0;
+height:48px
+}
+.share-buttons li:last-child{
+margin-bottom:0
+}
+.share-buttons li .sharing-platform-button{
+box-sizing:border-box;
+cursor:pointer;
+display:block;
+height:100%;
+margin-bottom:0;
+padding:0 16px;
+position:relative;
+width:100%
+}
+.share-buttons li .sharing-platform-button:focus,.share-buttons li .sharing-platform-button:hover{
+background-color:rgba(128,128,128,.1);
+outline:0
+}
+.share-buttons li svg[class*=" sharing-"],.share-buttons li svg[class^=sharing-]{
+position:absolute;
+top:10px
+}
+.share-buttons li span.sharing-platform-button{
+position:relative;
+top:0
+}
+.share-buttons li .platform-sharing-text{
+display:block;
+font-size:16px;
+line-height:48px;
+white-space:nowrap
+}
+.share-buttons li .platform-sharing-text{
+margin-left:56px
+}
+.sidebar-container{
+background-color:#f7f7f7;
+max-width:280px;
+overflow-y:auto;
+-webkit-transition-property:-webkit-transform;
+transition-property:-webkit-transform;
+transition-property:transform;
+transition-property:transform,-webkit-transform;
+-webkit-transition-duration:.3s;
+transition-duration:.3s;
+-webkit-transition-timing-function:cubic-bezier(0,0,.2,1);
+transition-timing-function:cubic-bezier(0,0,.2,1);
+width:280px;
+z-index:101;
+-webkit-overflow-scrolling:touch
+}
+.sidebar-container .navigation{
+line-height:0;
+padding:16px
+}
+.sidebar-container .sidebar-back{
+cursor:pointer
+}
+.sidebar-container .widget{
+background:0 0;
+margin:0 16px;
+padding:16px 0
+}
+.sidebar-container .widget .title{
+color:#000000;
+margin:0
+}
+.sidebar-container .widget ul{
+list-style:none;
+margin:0;
+padding:0
+}
+.sidebar-container .widget ul ul{
+margin-left:1em
+}
+.sidebar-container .widget li{
+font-size:16px;
+line-height:normal
+}
+.sidebar-container .widget+.widget{
+border-top:1px solid rgba(0, 0, 0, 0.12)
+}
+.BlogArchive li{
+margin:16px 0
+}
+.BlogArchive li:last-child{
+margin-bottom:0
+}
+.Label li a{
+display:inline-block
+}
+.BlogArchive .post-count,.Label .label-count{
+float:right;
+margin-left:.25em
+}
+.BlogArchive .post-count::before,.Label .label-count::before{
+content:"("
+}
+.BlogArchive .post-count::after,.Label .label-count::after{
+content:")"
+}
+.widget.Translate .skiptranslate>div{
+display:block!important
+}
+.widget.Profile .profile-link{
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex
+}
+.widget.Profile .team-member .default-avatar-wrapper,.widget.Profile .team-member .profile-img{
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto;
+margin-right:1em
+}
+.widget.Profile .individual .profile-link{
+-webkit-box-orient:vertical;
+-webkit-box-direction:normal;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column
+}
+.widget.Profile .team .profile-link .profile-name{
+-webkit-align-self:center;
+-ms-flex-item-align:center;
+align-self:center;
+display:block;
+-webkit-box-flex:1;
+-webkit-flex:1 1 auto;
+-ms-flex:1 1 auto;
+flex:1 1 auto
+}
+.dim-overlay{
+background-color:rgba(0,0,0,.54);
+z-index:100
+}
+body.sidebar-visible{
+overflow-y:hidden
+}
+@media screen and (max-width:680px){
+.sidebar-container{
+bottom:0;
+position:fixed;
+top:0;
+left:auto;
+right:0
+}
+.sidebar-container.sidebar-invisible{
+-webkit-transition-timing-function:cubic-bezier(.4,0,.6,1);
+transition-timing-function:cubic-bezier(.4,0,.6,1);
+-webkit-transform:translateX(100%);
+-ms-transform:translateX(100%);
+transform:translateX(100%)
+}
+}
+.dialog{
+box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+background:#ffffff;
+box-sizing:border-box;
+color:#000000;
+padding:30px;
+position:fixed;
+text-align:center;
+width:calc(100% - 24px);
+z-index:101
+}
+.dialog input[type=email],.dialog input[type=text]{
+background-color:transparent;
+border:0;
+border-bottom:solid 1px rgba(0,0,0,.12);
+color:#000000;
+display:block;
+font-family:Ubuntu, sans-serif;
+font-size:16px;
+line-height:24px;
+margin:auto;
+padding-bottom:7px;
+outline:0;
+text-align:center;
+width:100%
+}
+.dialog input[type=email]::-webkit-input-placeholder,.dialog input[type=text]::-webkit-input-placeholder{
+color:rgba(0,0,0,.5)
+}
+.dialog input[type=email]::-moz-placeholder,.dialog input[type=text]::-moz-placeholder{
+color:rgba(0,0,0,.5)
+}
+.dialog input[type=email]:-ms-input-placeholder,.dialog input[type=text]:-ms-input-placeholder{
+color:rgba(0,0,0,.5)
+}
+.dialog input[type=email]::-ms-input-placeholder,.dialog input[type=text]::-ms-input-placeholder{
+color:rgba(0,0,0,.5)
+}
+.dialog input[type=email]::placeholder,.dialog input[type=text]::placeholder{
+color:rgba(0,0,0,.5)
+}
+.dialog input[type=email]:focus,.dialog input[type=text]:focus{
+border-bottom:solid 2px #729c0b;
+padding-bottom:6px
+}
+.dialog input.no-cursor{
+color:transparent;
+text-shadow:0 0 0 #000000
+}
+.dialog input.no-cursor:focus{
+outline:0
+}
+.dialog input.no-cursor:focus{
+outline:0
+}
+.dialog input[type=submit]{
+font-family:Ubuntu, sans-serif
+}
+.dialog .goog-buttonset-default{
+color:#729c0b
+}
+.loading-spinner-large{
+-webkit-animation:mspin-rotate 1.568s infinite linear;
+animation:mspin-rotate 1.568s infinite linear;
+height:48px;
+overflow:hidden;
+position:absolute;
+width:48px;
+z-index:200
+}
+.loading-spinner-large>div{
+-webkit-animation:mspin-revrot 5332ms infinite steps(4);
+animation:mspin-revrot 5332ms infinite steps(4)
+}
+.loading-spinner-large>div>div{
+-webkit-animation:mspin-singlecolor-large-film 1333ms infinite steps(81);
+animation:mspin-singlecolor-large-film 1333ms infinite steps(81);
+background-size:100%;
+height:48px;
+width:3888px
+}
+.mspin-black-large>div>div,.mspin-grey_54-large>div>div{
+background-image:url(https://www.blogblog.com/indie/mspin_black_large.svg)
+}
+.mspin-white-large>div>div{
+background-image:url(https://www.blogblog.com/indie/mspin_white_large.svg)
+}
+.mspin-grey_54-large{
+opacity:.54
+}
+@-webkit-keyframes mspin-singlecolor-large-film{
+from{
+-webkit-transform:translateX(0);
+transform:translateX(0)
+}
+to{
+-webkit-transform:translateX(-3888px);
+transform:translateX(-3888px)
+}
+}
+@keyframes mspin-singlecolor-large-film{
+from{
+-webkit-transform:translateX(0);
+transform:translateX(0)
+}
+to{
+-webkit-transform:translateX(-3888px);
+transform:translateX(-3888px)
+}
+}
+@-webkit-keyframes mspin-rotate{
+from{
+-webkit-transform:rotate(0);
+transform:rotate(0)
+}
+to{
+-webkit-transform:rotate(360deg);
+transform:rotate(360deg)
+}
+}
+@keyframes mspin-rotate{
+from{
+-webkit-transform:rotate(0);
+transform:rotate(0)
+}
+to{
+-webkit-transform:rotate(360deg);
+transform:rotate(360deg)
+}
+}
+@-webkit-keyframes mspin-revrot{
+from{
+-webkit-transform:rotate(0);
+transform:rotate(0)
+}
+to{
+-webkit-transform:rotate(-360deg);
+transform:rotate(-360deg)
+}
+}
+@keyframes mspin-revrot{
+from{
+-webkit-transform:rotate(0);
+transform:rotate(0)
+}
+to{
+-webkit-transform:rotate(-360deg);
+transform:rotate(-360deg)
+}
+}
+.subscribe-popup{
+max-width:364px
+}
+.subscribe-popup h3{
+color:#212121;
+font-size:1.8em;
+margin-top:0
+}
+.subscribe-popup .FollowByEmail h3{
+display:none
+}
+.subscribe-popup .FollowByEmail .follow-by-email-submit{
+color:#729c0b;
+display:inline-block;
+margin:0 auto;
+margin-top:24px;
+width:auto;
+white-space:normal
+}
+.subscribe-popup .FollowByEmail .follow-by-email-submit:disabled{
+cursor:default;
+opacity:.3
+}
+@media (max-width:800px){
+.blog-name div.widget.Subscribe{
+margin-bottom:16px
+}
+body.item-view .blog-name div.widget.Subscribe{
+margin:8px auto 16px auto;
+width:100%
+}
+}
+.sidebar-container .svg-icon-24{
+fill:#729c0b
+}
+.centered-top .svg-icon-24{
+fill:#729c0b
+}
+.centered-bottom .svg-icon-24.touch-icon,.centered-bottom a .svg-icon-24,.centered-bottom button .svg-icon-24{
+fill:#729c0b
+}
+.post-wrapper .svg-icon-24.touch-icon,.post-wrapper a .svg-icon-24,.post-wrapper button .svg-icon-24{
+fill:#729c0b
+}
+.centered-bottom .share-buttons .svg-icon-24,.share-buttons .svg-icon-24{
+fill:#729c0b
+}
+.svg-icon-24.hamburger-menu{
+fill:#729c0b
+}
+body#layout .page_body{
+padding:0;
+position:relative;
+top:0
+}
+body#layout .page{
+display:inline-block;
+left:inherit;
+position:relative;
+vertical-align:top;
+width:540px
+}
+body{
+background:#f7f7f7 none repeat scroll top left;
+background-color:#f7f7f7;
+background-size:cover;
+color:#000000;
+font:400 16px Ubuntu, sans-serif;
+margin:0;
+min-height:100vh
+}
+h3,h3.title{
+color:#000000
+}
+.post-wrapper .post-title,.post-wrapper .post-title a,.post-wrapper .post-title a:hover,.post-wrapper .post-title a:visited{
+color:#212121
+}
+a{
+color:#729c0b;
+font-style:normal;
+text-decoration:none
+}
+a:visited{
+color:#729c0b
+}
+a:hover{
+color:#729c0b
+}
+blockquote{
+color:#424242;
+font:400 16px Ubuntu, sans-serif;
+font-size:x-large;
+font-style:italic;
+font-weight:300;
+text-align:center
+}
+.dim-overlay{
+z-index:100
+}
+.page{
+box-sizing:border-box;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-orient:vertical;
+-webkit-box-direction:normal;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+min-height:100vh;
+padding-bottom:1em
+}
+.page>*{
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto
+}
+.page>#footer{
+margin-top:auto
+}
+.bg-photo-container{
+overflow:hidden
+}
+.bg-photo-container,.bg-photo-container .bg-photo{
+height:464px;
+width:100%
+}
+.bg-photo-container .bg-photo{
+background-position:center;
+background-size:cover;
+z-index:-1
+}
+.centered{
+margin:0 auto;
+position:relative;
+width:1482px
+}
+.centered .main,.centered .main-container{
+float:left
+}
+.centered .main{
+padding-bottom:1em
+}
+.centered .centered-bottom::after{
+clear:both;
+content:"";
+display:table
+}
+@media (min-width:1626px){
+.page_body.has-vertical-ads .centered{
+width:1625px
+}
+}
+@media (min-width:1225px) and (max-width:1482px){
+.centered{
+width:1081px
+}
+}
+@media (min-width:1225px) and (max-width:1625px){
+.page_body.has-vertical-ads .centered{
+width:1224px
+}
+}
+@media (max-width:1224px){
+.centered{
+width:680px
+}
+}
+@media (max-width:680px){
+.centered{
+max-width:600px;
+width:100%
+}
+}
+.feed-view .post-wrapper.hero,.main,.main-container,.post-filter-message,.top-nav .section{
+width:1187px
+}
+@media (min-width:1225px) and (max-width:1482px){
+.feed-view .post-wrapper.hero,.main,.main-container,.post-filter-message,.top-nav .section{
+width:786px
+}
+}
+@media (min-width:1225px) and (max-width:1625px){
+.feed-view .page_body.has-vertical-ads .post-wrapper.hero,.page_body.has-vertical-ads .feed-view .post-wrapper.hero,.page_body.has-vertical-ads .main,.page_body.has-vertical-ads .main-container,.page_body.has-vertical-ads .post-filter-message,.page_body.has-vertical-ads .top-nav .section{
+width:786px
+}
+}
+@media (max-width:1224px){
+.feed-view .post-wrapper.hero,.main,.main-container,.post-filter-message,.top-nav .section{
+width:auto
+}
+}
+.widget .title{
+font-size:18px;
+line-height:28px;
+margin:18px 0
+}
+.extendable .show-less,.extendable .show-more{
+color:#729c0b;
+font:500 12px Ubuntu, sans-serif;
+cursor:pointer;
+text-transform:uppercase;
+margin:0 -16px;
+padding:16px
+}
+.widget.Profile{
+font:400 16px Ubuntu, sans-serif
+}
+.sidebar-container .widget.Profile{
+padding:16px
+}
+.widget.Profile h2{
+display:none
+}
+.widget.Profile .title{
+margin:16px 32px
+}
+.widget.Profile .profile-img{
+border-radius:50%
+}
+.widget.Profile .individual{
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex
+}
+.widget.Profile .individual .profile-info{
+-webkit-align-self:center;
+-ms-flex-item-align:center;
+align-self:center;
+margin-left:16px
+}
+.widget.Profile .profile-datablock{
+margin-top:0;
+margin-bottom:.75em
+}
+.widget.Profile .profile-link{
+background-image:none!important;
+font-family:inherit;
+overflow:hidden;
+max-width:100%
+}
+.widget.Profile .individual .profile-link{
+margin:0 -10px;
+padding:0 10px;
+display:block
+}
+.widget.Profile .individual .profile-data a.profile-link.g-profile,.widget.Profile .team a.profile-link.g-profile .profile-name{
+font:500 16px Ubuntu, sans-serif;
+color:#000000;
+margin-bottom:.75em
+}
+.widget.Profile .individual .profile-data a.profile-link.g-profile{
+line-height:1.25
+}
+.widget.Profile .individual>a:first-child{
+-webkit-flex-shrink:0;
+-ms-flex-negative:0;
+flex-shrink:0
+}
+.widget.Profile dd{
+margin:0
+}
+.widget.Profile ul{
+list-style:none;
+padding:0
+}
+.widget.Profile ul li{
+margin:10px 0 30px
+}
+.widget.Profile .team .extendable,.widget.Profile .team .extendable .first-items,.widget.Profile .team .extendable .remaining-items{
+margin:0;
+padding:0;
+max-width:100%
+}
+.widget.Profile .team-member .profile-name-container{
+-webkit-box-flex:0;
+-webkit-flex:0 1 auto;
+-ms-flex:0 1 auto;
+flex:0 1 auto
+}
+.widget.Profile .team .extendable .show-less,.widget.Profile .team .extendable .show-more{
+position:relative;
+left:56px
+}
+#comments a,.post-wrapper a{
+color:#729c0b
+}
+div.widget.Blog .blog-posts .post-outer{
+border:0
+}
+div.widget.Blog .post-outer{
+padding-bottom:0
+}
+.post .thumb{
+float:left;
+height:20%;
+width:20%
+}
+.no-posts-message,.status-msg-body{
+margin:10px 0
+}
+.blog-pager{
+text-align:center
+}
+.post-title{
+margin:0
+}
+.post-title,.post-title a{
+font:500 24px Ubuntu, sans-serif
+}
+.post-body{
+color:#000000;
+display:block;
+font:400 16px Merriweather, Georgia, serif;
+line-height:32px;
+margin:0
+}
+.post-snippet{
+color:#000000;
+font:400 14px Merriweather, Georgia, serif;
+line-height:24px;
+margin:8px 0;
+max-height:72px
+}
+.post-snippet .snippet-fade{
+background:-webkit-linear-gradient(left,#ffffff 0,#ffffff 20%,rgba(255, 255, 255, 0) 100%);
+background:linear-gradient(to left,#ffffff 0,#ffffff 20%,rgba(255, 255, 255, 0) 100%);
+color:#000000;
+bottom:0;
+position:absolute
+}
+.post-body img{
+height:inherit;
+max-width:100%
+}
+.byline,.byline.post-author a,.byline.post-timestamp a{
+color:#757575;
+font:italic 400 12px Merriweather, Georgia, serif
+}
+.byline.post-author{
+text-transform:lowercase
+}
+.byline.post-author a{
+text-transform:none
+}
+.item-byline .byline,.post-header .byline{
+margin-right:0
+}
+.post-share-buttons .share-buttons{
+background:#ffffff;
+color:#000000;
+font:400 14px Ubuntu, sans-serif
+}
+.tr-caption{
+color:#424242;
+font:400 16px Ubuntu, sans-serif;
+font-size:1.1em;
+font-style:italic
+}
+.post-filter-message{
+background-color:#729c0b;
+box-sizing:border-box;
+color:#ffffff;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+font:italic 400 18px Merriweather, Georgia, serif;
+margin-bottom:16px;
+margin-top:32px;
+padding:12px 16px
+}
+.post-filter-message>div:first-child{
+-webkit-box-flex:1;
+-webkit-flex:1 0 auto;
+-ms-flex:1 0 auto;
+flex:1 0 auto
+}
+.post-filter-message a{
+color:#729c0b;
+font:500 12px Ubuntu, sans-serif;
+cursor:pointer;
+text-transform:uppercase;
+color:#ffffff;
+padding-left:30px;
+white-space:nowrap
+}
+.post-filter-message .search-label,.post-filter-message .search-query{
+font-style:italic;
+quotes:"\201c" "\201d" "\2018" "\2019"
+}
+.post-filter-message .search-label::before,.post-filter-message .search-query::before{
+content:open-quote
+}
+.post-filter-message .search-label::after,.post-filter-message .search-query::after{
+content:close-quote
+}
+#blog-pager{
+margin-top:2em;
+margin-bottom:1em
+}
+#blog-pager a{
+color:#729c0b;
+font:500 12px Ubuntu, sans-serif;
+cursor:pointer;
+text-transform:uppercase
+}
+.Label{
+overflow-x:hidden
+}
+.Label ul{
+list-style:none;
+padding:0
+}
+.Label li{
+display:inline-block;
+overflow:hidden;
+max-width:100%;
+text-overflow:ellipsis;
+white-space:nowrap
+}
+.Label .first-ten{
+margin-top:16px
+}
+.Label .show-all{
+border-color:#729c0b;
+color:#729c0b;
+cursor:pointer;
+display:inline-block;
+font-style:normal;
+margin-top:8px;
+text-transform:uppercase
+}
+.Label .show-all.hidden{
+display:inline-block
+}
+.Label li a,.Label span.label-size,.byline.post-labels a{
+background-color:rgba(114,156,11,.1);
+border-radius:2px;
+color:#729c0b;
+cursor:pointer;
+display:inline-block;
+font:500 10.5px Ubuntu, sans-serif;
+line-height:1.5;
+margin:4px 4px 4px 0;
+padding:4px 8px;
+text-transform:uppercase;
+vertical-align:middle
+}
+body.item-view .byline.post-labels a{
+background-color:rgba(114,156,11,.1);
+color:#729c0b
+}
+.FeaturedPost .item-thumbnail img{
+max-width:100%
+}
+.sidebar-container .FeaturedPost .post-title a{
+color:#729c0b;
+font:500 14px Ubuntu, sans-serif
+}
+body.item-view .PopularPosts{
+display:inline-block;
+overflow-y:auto;
+vertical-align:top;
+width:280px
+}
+.PopularPosts h3.title{
+font:500 16px Ubuntu, sans-serif
+}
+.PopularPosts .post-title{
+margin:0 0 16px
+}
+.PopularPosts .post-title a{
+color:#729c0b;
+font:500 14px Ubuntu, sans-serif;
+line-height:24px
+}
+.PopularPosts .item-thumbnail{
+clear:both;
+height:152px;
+overflow-y:hidden;
+width:100%
+}
+.PopularPosts .item-thumbnail img{
+padding:0;
+width:100%
+}
+.PopularPosts .popular-posts-snippet{
+color:#535353;
+font:italic 400 14px Merriweather, Georgia, serif;
+line-height:24px;
+max-height:calc(24px * 4);
+overflow:hidden
+}
+.PopularPosts .popular-posts-snippet .snippet-fade{
+color:#535353
+}
+.PopularPosts .post{
+margin:30px 0;
+position:relative
+}
+.PopularPosts .post+.post{
+padding-top:1em
+}
+.popular-posts-snippet .snippet-fade{
+background:-webkit-linear-gradient(left,#f7f7f7 0,#f7f7f7 20%,rgba(247, 247, 247, 0) 100%);
+background:linear-gradient(to left,#f7f7f7 0,#f7f7f7 20%,rgba(247, 247, 247, 0) 100%);
+right:0;
+height:24px;
+line-height:24px;
+position:absolute;
+top:calc(24px * 3);
+width:96px
+}
+.Attribution{
+color:#000000
+}
+.Attribution a,.Attribution a:hover,.Attribution a:visited{
+color:#729c0b
+}
+.Attribution svg{
+fill:#757575
+}
+.inline-ad{
+margin-bottom:16px
+}
+.item-view .inline-ad{
+display:block
+}
+.vertical-ad-container{
+float:left;
+margin-left:15px;
+min-height:1px;
+width:128px
+}
+.item-view .vertical-ad-container{
+margin-top:30px
+}
+.inline-ad-placeholder,.vertical-ad-placeholder{
+background:#ffffff;
+border:1px solid #000;
+opacity:.9;
+vertical-align:middle;
+text-align:center
+}
+.inline-ad-placeholder span,.vertical-ad-placeholder span{
+margin-top:290px;
+display:block;
+text-transform:uppercase;
+font-weight:700;
+color:#212121
+}
+.vertical-ad-placeholder{
+height:600px
+}
+.vertical-ad-placeholder span{
+margin-top:290px;
+padding:0 40px
+}
+.inline-ad-placeholder{
+height:90px
+}
+.inline-ad-placeholder span{
+margin-top:35px
+}
+.centered-top-container.sticky,.sticky .centered-top{
+background-color:#efefef
+}
+.centered-top{
+-webkit-box-align:start;
+-webkit-align-items:flex-start;
+-ms-flex-align:start;
+align-items:flex-start;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-wrap:wrap;
+-ms-flex-wrap:wrap;
+flex-wrap:wrap;
+margin:0 auto;
+padding-top:40px;
+max-width:1482px
+}
+.page_body.has-vertical-ads .centered-top{
+max-width:1625px
+}
+.centered-top .blog-name,.centered-top .hamburger-section,.centered-top .search{
+margin-left:16px
+}
+.centered-top .return_link{
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto;
+height:24px;
+-webkit-box-ordinal-group:1;
+-webkit-order:0;
+-ms-flex-order:0;
+order:0;
+width:24px
+}
+.centered-top .blog-name{
+-webkit-box-flex:1;
+-webkit-flex:1 1 0;
+-ms-flex:1 1 0px;
+flex:1 1 0;
+-webkit-box-ordinal-group:2;
+-webkit-order:1;
+-ms-flex-order:1;
+order:1
+}
+.centered-top .search{
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto;
+-webkit-box-ordinal-group:3;
+-webkit-order:2;
+-ms-flex-order:2;
+order:2
+}
+.centered-top .hamburger-section{
+display:none;
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto;
+-webkit-box-ordinal-group:4;
+-webkit-order:3;
+-ms-flex-order:3;
+order:3
+}
+.centered-top .subscribe-section-container{
+-webkit-box-flex:1;
+-webkit-flex:1 0 100%;
+-ms-flex:1 0 100%;
+flex:1 0 100%;
+-webkit-box-ordinal-group:5;
+-webkit-order:4;
+-ms-flex-order:4;
+order:4
+}
+.centered-top .top-nav{
+-webkit-box-flex:1;
+-webkit-flex:1 0 100%;
+-ms-flex:1 0 100%;
+flex:1 0 100%;
+margin-top:32px;
+-webkit-box-ordinal-group:6;
+-webkit-order:5;
+-ms-flex-order:5;
+order:5
+}
+.sticky .centered-top{
+-webkit-box-align:center;
+-webkit-align-items:center;
+-ms-flex-align:center;
+align-items:center;
+box-sizing:border-box;
+-webkit-flex-wrap:nowrap;
+-ms-flex-wrap:nowrap;
+flex-wrap:nowrap;
+padding:0 16px
+}
+.sticky .centered-top .blog-name{
+-webkit-box-flex:0;
+-webkit-flex:0 1 auto;
+-ms-flex:0 1 auto;
+flex:0 1 auto;
+max-width:none;
+min-width:0
+}
+.sticky .centered-top .subscribe-section-container{
+border-left:1px solid rgba(0, 0, 0, 0.3);
+-webkit-box-flex:1;
+-webkit-flex:1 0 auto;
+-ms-flex:1 0 auto;
+flex:1 0 auto;
+margin:0 16px;
+-webkit-box-ordinal-group:3;
+-webkit-order:2;
+-ms-flex-order:2;
+order:2
+}
+.sticky .centered-top .search{
+-webkit-box-flex:1;
+-webkit-flex:1 0 auto;
+-ms-flex:1 0 auto;
+flex:1 0 auto;
+-webkit-box-ordinal-group:4;
+-webkit-order:3;
+-ms-flex-order:3;
+order:3
+}
+.sticky .centered-top .hamburger-section{
+-webkit-box-ordinal-group:5;
+-webkit-order:4;
+-ms-flex-order:4;
+order:4
+}
+.sticky .centered-top .top-nav{
+display:none
+}
+.search{
+position:relative;
+width:250px
+}
+.search,.search .search-expand,.search .section{
+height:48px
+}
+.search .search-expand{
+background:0 0;
+border:0;
+margin:0;
+outline:0;
+padding:0;
+display:none;
+margin-left:auto
+}
+.search .search-expand-text{
+display:none
+}
+.search .search-expand .svg-icon-24,.search .search-submit-container .svg-icon-24{
+fill:rgba(0, 0, 0, 0.38);
+-webkit-transition:.3s fill cubic-bezier(.4,0,.2,1);
+transition:.3s fill cubic-bezier(.4,0,.2,1)
+}
+.search h3{
+display:none
+}
+.search .section{
+background-color:rgba(0, 0, 0, 0.03);
+box-sizing:border-box;
+right:0;
+line-height:24px;
+overflow-x:hidden;
+position:absolute;
+top:0;
+-webkit-transition-duration:.3s;
+transition-duration:.3s;
+-webkit-transition-property:background-color,width;
+transition-property:background-color,width;
+-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);
+transition-timing-function:cubic-bezier(.4,0,.2,1);
+width:250px;
+z-index:8
+}
+.search.focused .section{
+background-color:rgba(0, 0, 0, 0.03)
+}
+.search form{
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex
+}
+.search form .search-submit-container{
+-webkit-box-align:center;
+-webkit-align-items:center;
+-ms-flex-align:center;
+align-items:center;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto;
+height:48px;
+-webkit-box-ordinal-group:1;
+-webkit-order:0;
+-ms-flex-order:0;
+order:0
+}
+.search form .search-input{
+-webkit-box-flex:1;
+-webkit-flex:1 1 auto;
+-ms-flex:1 1 auto;
+flex:1 1 auto;
+-webkit-box-ordinal-group:2;
+-webkit-order:1;
+-ms-flex-order:1;
+order:1
+}
+.search form .search-input input{
+box-sizing:border-box;
+height:48px;
+width:100%
+}
+.search .search-submit-container input[type=submit]{
+display:none
+}
+.search .search-submit-container .search-icon{
+margin:0;
+padding:12px 8px
+}
+.search .search-input input{
+background:0 0;
+border:0;
+color:#1f1f1f;
+font:400 16px Merriweather, Georgia, serif;
+outline:0;
+padding:0 8px
+}
+.search .search-input input::-webkit-input-placeholder{
+color:rgba(0, 0, 0, 0.38);
+font:italic 400 15px Merriweather, Georgia, serif;
+line-height:48px
+}
+.search .search-input input::-moz-placeholder{
+color:rgba(0, 0, 0, 0.38);
+font:italic 400 15px Merriweather, Georgia, serif;
+line-height:48px
+}
+.search .search-input input:-ms-input-placeholder{
+color:rgba(0, 0, 0, 0.38);
+font:italic 400 15px Merriweather, Georgia, serif;
+line-height:48px
+}
+.search .search-input input::-ms-input-placeholder{
+color:rgba(0, 0, 0, 0.38);
+font:italic 400 15px Merriweather, Georgia, serif;
+line-height:48px
+}
+.search .search-input input::placeholder{
+color:rgba(0, 0, 0, 0.38);
+font:italic 400 15px Merriweather, Georgia, serif;
+line-height:48px
+}
+.search .dim-overlay{
+background-color:transparent
+}
+.centered-top .Header h1{
+box-sizing:border-box;
+color:#1f1f1f;
+font:500 62px Ubuntu, sans-serif;
+margin:0;
+padding:0
+}
+.centered-top .Header h1 a,.centered-top .Header h1 a:hover,.centered-top .Header h1 a:visited{
+color:inherit;
+font-size:inherit
+}
+.centered-top .Header p{
+color:#1f1f1f;
+font:italic 300 14px Merriweather, Georgia, serif;
+line-height:1.7;
+margin:16px 0;
+padding:0
+}
+.sticky .centered-top .Header h1{
+color:#1f1f1f;
+font-size:32px;
+margin:16px 0;
+padding:0;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap
+}
+.sticky .centered-top .Header p{
+display:none
+}
+.subscribe-section-container{
+border-left:0;
+margin:0
+}
+.subscribe-section-container .subscribe-button{
+background:0 0;
+border:0;
+margin:0;
+outline:0;
+padding:0;
+color:#729c0b;
+cursor:pointer;
+display:inline-block;
+font:700 12px Ubuntu, sans-serif;
+margin:0 auto;
+padding:16px;
+text-transform:uppercase;
+white-space:nowrap
+}
+.top-nav .PageList h3{
+margin-left:16px
+}
+.top-nav .PageList ul{
+list-style:none;
+margin:0;
+padding:0
+}
+.top-nav .PageList ul li{
+color:#729c0b;
+font:500 12px Ubuntu, sans-serif;
+cursor:pointer;
+text-transform:uppercase;
+font:700 12px Ubuntu, sans-serif
+}
+.top-nav .PageList ul li a{
+background-color:#ffffff;
+color:#729c0b;
+display:block;
+height:44px;
+line-height:44px;
+overflow:hidden;
+padding:0 22px;
+text-overflow:ellipsis;
+vertical-align:middle
+}
+.top-nav .PageList ul li.selected a{
+color:#729c0b
+}
+.top-nav .PageList ul li:first-child a{
+padding-left:16px
+}
+.top-nav .PageList ul li:last-child a{
+padding-right:16px
+}
+.top-nav .PageList .dim-overlay{
+opacity:0
+}
+.top-nav .overflowable-contents li{
+float:left;
+max-width:100%
+}
+.top-nav .overflow-button{
+-webkit-box-align:center;
+-webkit-align-items:center;
+-ms-flex-align:center;
+align-items:center;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+height:44px;
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto;
+padding:0 16px;
+position:relative;
+-webkit-transition:opacity .3s cubic-bezier(.4,0,.2,1);
+transition:opacity .3s cubic-bezier(.4,0,.2,1);
+width:24px
+}
+.top-nav .overflow-button.hidden{
+display:none
+}
+.top-nav .overflow-button svg{
+margin-top:0
+}
+@media (max-width:1224px){
+.search{
+width:24px
+}
+.search .search-expand{
+display:block;
+position:relative;
+z-index:8
+}
+.search .search-expand .search-expand-icon{
+fill:transparent
+}
+.search .section{
+background-color:rgba(0, 0, 0, 0);
+width:32px;
+z-index:7
+}
+.search.focused .section{
+width:250px;
+z-index:8
+}
+.search .search-submit-container .svg-icon-24{
+fill:#729c0b
+}
+.search.focused .search-submit-container .svg-icon-24{
+fill:rgba(0, 0, 0, 0.38)
+}
+.blog-name,.return_link,.subscribe-section-container{
+opacity:1;
+-webkit-transition:opacity .3s cubic-bezier(.4,0,.2,1);
+transition:opacity .3s cubic-bezier(.4,0,.2,1)
+}
+.centered-top.search-focused .blog-name,.centered-top.search-focused .return_link,.centered-top.search-focused .subscribe-section-container{
+opacity:0
+}
+body.search-view .centered-top.search-focused .blog-name .section,body.search-view .centered-top.search-focused .subscribe-section-container{
+display:none
+}
+}
+@media (max-width:745px){
+.top-nav .section.no-items#page_list_top{
+display:none
+}
+.centered-top{
+padding-top:16px
+}
+.centered-top .header_container{
+margin:0 auto;
+max-width:600px
+}
+.centered-top .hamburger-section{
+-webkit-box-align:center;
+-webkit-align-items:center;
+-ms-flex-align:center;
+align-items:center;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+height:48px;
+margin-right:24px
+}
+.widget.Header h1{
+font:500 36px Ubuntu, sans-serif;
+padding:0
+}
+.top-nav .PageList{
+max-width:100%;
+overflow-x:auto
+}
+.centered-top-container.sticky .centered-top{
+-webkit-flex-wrap:wrap;
+-ms-flex-wrap:wrap;
+flex-wrap:wrap
+}
+.centered-top-container.sticky .blog-name{
+-webkit-box-flex:1;
+-webkit-flex:1 1 0;
+-ms-flex:1 1 0px;
+flex:1 1 0
+}
+.centered-top-container.sticky .search{
+-webkit-box-flex:0;
+-webkit-flex:0 0 auto;
+-ms-flex:0 0 auto;
+flex:0 0 auto
+}
+.centered-top-container.sticky .hamburger-section,.centered-top-container.sticky .search{
+margin-bottom:8px;
+margin-top:8px
+}
+.centered-top-container.sticky .subscribe-section-container{
+border:0;
+-webkit-box-flex:1;
+-webkit-flex:1 0 100%;
+-ms-flex:1 0 100%;
+flex:1 0 100%;
+margin:-16px 0 0;
+-webkit-box-ordinal-group:6;
+-webkit-order:5;
+-ms-flex-order:5;
+order:5
+}
+body.item-view .centered-top-container.sticky .subscribe-section-container{
+margin-left:24px
+}
+.centered-top-container.sticky .subscribe-button{
+padding:8px 16px 16px;
+margin-bottom:0
+}
+.centered-top-container.sticky .widget.Header h1{
+font-size:16px;
+margin:0
+}
+}
+body.sidebar-visible .page{
+overflow-y:scroll
+}
+.sidebar-container{
+float:left;
+margin-left:15px
+}
+.sidebar-container a{
+font:400 14px Merriweather, Georgia, serif;
+color:#729c0b
+}
+.sidebar-container .sidebar-back{
+float:right
+}
+.sidebar-container .navigation{
+display:none
+}
+.sidebar-container .widget{
+margin:auto 0;
+padding:24px
+}
+.sidebar-container .widget .title{
+font:500 16px Ubuntu, sans-serif
+}
+@media (min-width:681px) and (max-width:1224px){
+.error-view .sidebar-container{
+display:none
+}
+}
+@media (max-width:680px){
+.sidebar-container{
+margin-left:0;
+max-width:none;
+width:100%
+}
+.sidebar-container .navigation{
+display:block;
+padding:24px
+}
+.sidebar-container .navigation+.sidebar.section{
+clear:both
+}
+.sidebar-container .widget{
+padding-left:32px
+}
+.sidebar-container .widget.Profile{
+padding-left:24px
+}
+}
+.post-wrapper{
+background-color:#ffffff;
+position:relative
+}
+.feed-view .blog-posts{
+margin-right:-15px;
+width:calc(100% + 15px)
+}
+.feed-view .post-wrapper{
+border-radius:0px;
+float:left;
+overflow:hidden;
+-webkit-transition:.3s box-shadow cubic-bezier(.4,0,.2,1);
+transition:.3s box-shadow cubic-bezier(.4,0,.2,1);
+width:385px
+}
+.feed-view .post-wrapper:hover{
+box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)
+}
+.feed-view .post-wrapper.hero{
+background-position:center;
+background-size:cover;
+position:relative
+}
+.feed-view .post-wrapper .post,.feed-view .post-wrapper .post .snippet-thumbnail{
+background-color:#ffffff;
+padding:24px 16px
+}
+.feed-view .post-wrapper .snippet-thumbnail{
+-webkit-transition:.3s opacity cubic-bezier(.4,0,.2,1);
+transition:.3s opacity cubic-bezier(.4,0,.2,1)
+}
+.feed-view .post-wrapper.has-labels.image .snippet-thumbnail-container{
+background-color:rgba(0, 0, 0, 1)
+}
+.feed-view .post-wrapper.has-labels:hover .snippet-thumbnail{
+opacity:.7
+}
+.feed-view .inline-ad,.feed-view .post-wrapper{
+margin-bottom:15px;
+margin-top:0;
+margin-right:15px;
+margin-left:0
+}
+.feed-view .post-wrapper.hero .post-title a{
+font-size:20px;
+line-height:24px
+}
+.feed-view .post-wrapper.not-hero .post-title a{
+font-size:16px;
+line-height:24px
+}
+.feed-view .post-wrapper .post-title a{
+display:block;
+margin:-296px -16px;
+padding:296px 16px;
+position:relative;
+text-overflow:ellipsis;
+z-index:2
+}
+.feed-view .post-wrapper .byline,.feed-view .post-wrapper .comment-link{
+position:relative;
+z-index:3
+}
+.feed-view .not-hero.post-wrapper.no-image .post-title-container{
+position:relative;
+top:-90px
+}
+.feed-view .post-wrapper .post-header{
+padding:5px 0
+}
+.feed-view .byline{
+line-height:12px
+}
+.feed-view .hero .byline{
+line-height:15.6px
+}
+.feed-view .hero .byline,.feed-view .hero .byline.post-author a,.feed-view .hero .byline.post-timestamp a{
+font-size:14px
+}
+.feed-view .post-comment-link{
+float:left
+}
+.feed-view .post-share-buttons{
+float:right
+}
+.feed-view .header-buttons-byline{
+margin-top:16px;
+height:24px
+}
+.feed-view .header-buttons-byline .byline{
+height:24px
+}
+.feed-view .post-header-right-buttons .post-comment-link,.feed-view .post-header-right-buttons .post-jump-link{
+display:block;
+float:left;
+margin-left:16px
+}
+.feed-view .post .num_comments{
+display:inline-block;
+font:500 24px Ubuntu, sans-serif;
+font-size:12px;
+margin:-14px 6px 0;
+vertical-align:middle
+}
+.feed-view .post-wrapper .post-jump-link{
+float:right
+}
+.feed-view .post-wrapper .post-footer{
+margin-top:15px
+}
+.feed-view .post-wrapper .snippet-thumbnail,.feed-view .post-wrapper .snippet-thumbnail-container{
+height:184px;
+overflow-y:hidden
+}
+.feed-view .post-wrapper .snippet-thumbnail{
+display:block;
+background-position:center;
+background-size:cover;
+width:100%
+}
+.feed-view .post-wrapper.hero .snippet-thumbnail,.feed-view .post-wrapper.hero .snippet-thumbnail-container{
+height:272px;
+overflow-y:hidden
+}
+@media (min-width:681px){
+.feed-view .post-title a .snippet-container{
+height:48px;
+max-height:48px
+}
+.feed-view .post-title a .snippet-fade{
+background:-webkit-linear-gradient(left,#ffffff 0,#ffffff 20%,rgba(255, 255, 255, 0) 100%);
+background:linear-gradient(to left,#ffffff 0,#ffffff 20%,rgba(255, 255, 255, 0) 100%);
+color:transparent;
+height:24px;
+width:96px
+}
+.feed-view .hero .post-title-container .post-title a .snippet-container{
+height:24px;
+max-height:24px
+}
+.feed-view .hero .post-title a .snippet-fade{
+height:24px
+}
+.feed-view .post-header-left-buttons{
+position:relative
+}
+.feed-view .post-header-left-buttons:hover .touch-icon{
+opacity:1
+}
+.feed-view .hero.post-wrapper.no-image .post-authordate,.feed-view .hero.post-wrapper.no-image .post-title-container{
+position:relative;
+top:-150px
+}
+.feed-view .hero.post-wrapper.no-image .post-title-container{
+text-align:center
+}
+.feed-view .hero.post-wrapper.no-image .post-authordate{
+-webkit-box-pack:center;
+-webkit-justify-content:center;
+-ms-flex-pack:center;
+justify-content:center
+}
+.feed-view .labels-outer-container{
+margin:0 -4px;
+opacity:0;
+position:absolute;
+top:20px;
+-webkit-transition:.2s opacity;
+transition:.2s opacity;
+width:calc(100% - 2 * 16px)
+}
+.feed-view .post-wrapper.has-labels:hover .labels-outer-container{
+opacity:1
+}
+.feed-view .labels-container{
+max-height:calc(23.75px + 2 * 4px);
+overflow:hidden
+}
+.feed-view .labels-container .labels-more,.feed-view .labels-container .overflow-button-container{
+display:inline-block;
+float:right
+}
+.feed-view .labels-items{
+padding:0 4px
+}
+.feed-view .labels-container a{
+display:inline-block;
+max-width:calc(100% - 16px);
+overflow-x:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+vertical-align:top
+}
+.feed-view .labels-more{
+min-width:23.75px;
+padding:0;
+width:23.75px
+}
+.feed-view .labels-more{
+margin-left:8px
+}
+.feed-view .byline.post-labels{
+margin:0
+}
+.feed-view .byline.post-labels a,.feed-view .labels-more a{
+background-color:#ffffff;
+color:#729c0b;
+box-shadow:0 0 2px 0 rgba(0,0,0,.18);
+opacity:.9
+}
+.feed-view .labels-more a{
+border-radius:50%;
+display:inline-block;
+font:500 10.5px Ubuntu, sans-serif;
+line-height:23.75px;
+height:23.75px;
+padding:0;
+text-align:center;
+width:23.75px;
+max-width:23.75px
+}
+}
+@media (max-width:1224px){
+.feed-view .centered{
+padding-right:0
+}
+.feed-view .centered .main-container{
+float:none
+}
+.feed-view .blog-posts{
+margin-right:0;
+width:auto
+}
+.feed-view .post-wrapper{
+float:none
+}
+.feed-view .post-wrapper.hero{
+width:680px
+}
+.feed-view .page_body .centered div.widget.FeaturedPost,.feed-view div.widget.Blog{
+width:385px
+}
+.post-filter-message,.top-nav{
+margin-top:32px
+}
+.widget.Header h1{
+font:500 36px Ubuntu, sans-serif
+}
+.post-filter-message{
+display:block
+}
+.post-filter-message a{
+display:block;
+margin-top:8px;
+padding-left:0
+}
+.feed-view .not-hero .post-title-container .post-title a .snippet-container{
+height:auto
+}
+.feed-view .vertical-ad-container{
+display:none
+}
+.feed-view .blog-posts .inline-ad{
+display:block
+}
+}
+@media (max-width:680px){
+.feed-view .centered .main{
+float:none;
+width:100%
+}
+.feed-view .centered .centered-bottom{
+max-width:600px;
+width:auto
+}
+.feed-view .centered-bottom .hero.post-wrapper,.feed-view .centered-bottom .post-wrapper{
+max-width:600px;
+width:auto
+}
+.feed-view #header{
+width:auto
+}
+.feed-view .page_body .centered div.widget.FeaturedPost,.feed-view div.widget.Blog{
+top:50px;
+width:100%;
+z-index:6
+}
+.feed-view .main>.widget .title,.feed-view .post-filter-message{
+margin-left:8px;
+margin-right:8px
+}
+.feed-view .hero.post-wrapper{
+background-color:#729c0b;
+border-radius:0;
+height:416px
+}
+.feed-view .hero.post-wrapper .post{
+bottom:0;
+box-sizing:border-box;
+margin:16px;
+position:absolute;
+width:calc(100% - 32px)
+}
+.feed-view .hero.no-image.post-wrapper .post{
+box-shadow:0 0 16px rgba(0,0,0,.2);
+padding-top:120px;
+top:0
+}
+.feed-view .hero.no-image.post-wrapper .post-footer{
+position:absolute;
+bottom:16px;
+width:calc(100% - 32px)
+}
+.hero.post-wrapper h3{
+white-space:normal
+}
+.feed-view .post-wrapper h3,.feed-view .post-wrapper:hover h3{
+width:auto
+}
+.feed-view .hero.post-wrapper{
+margin:0 0 15px 0
+}
+.feed-view .inline-ad,.feed-view .post-wrapper{
+margin:0 8px 16px
+}
+.feed-view .post-labels{
+display:none
+}
+.feed-view .post-wrapper .snippet-thumbnail{
+background-size:cover;
+display:block;
+height:184px;
+margin:0;
+max-height:184px;
+width:100%
+}
+.feed-view .post-wrapper.hero .snippet-thumbnail,.feed-view .post-wrapper.hero .snippet-thumbnail-container{
+height:416px;
+max-height:416px
+}
+.feed-view .header-author-byline{
+display:none
+}
+.feed-view .hero .header-author-byline{
+display:block
+}
+}
+.item-view .page_body{
+padding-top:70px
+}
+.item-view .centered,.item-view .centered .main,.item-view .centered .main-container,.item-view .page_body.has-vertical-ads .centered,.item-view .page_body.has-vertical-ads .centered .main,.item-view .page_body.has-vertical-ads .centered .main-container{
+width:100%
+}
+.item-view .main-container{
+max-width:890px;
+margin-right:15px
+}
+.item-view .centered-bottom{
+max-width:1185px;
+margin-left:auto;
+margin-right:auto;
+padding-right:0;
+padding-top:0;
+width:100%
+}
+.item-view .page_body.has-vertical-ads .centered-bottom{
+max-width:1328px;
+width:100%
+}
+.item-view .bg-photo{
+-webkit-filter:blur(12px);
+filter:blur(12px);
+-webkit-transform:scale(1.05);
+-ms-transform:scale(1.05);
+transform:scale(1.05)
+}
+.item-view .bg-photo-container+.centered .centered-bottom{
+margin-top:0
+}
+.item-view .bg-photo-container+.centered .centered-bottom .post-wrapper{
+margin-top:-368px
+}
+.item-view .bg-photo-container+.centered-bottom{
+margin-top:0
+}
+.item-view .inline-ad{
+margin-bottom:0;
+margin-top:30px;
+padding-bottom:16px
+}
+.item-view .post-wrapper{
+border-radius:0px 0px 0 0;
+float:none;
+height:auto;
+margin:0;
+padding:32px;
+width:auto
+}
+.item-view .post-outer{
+padding:8px
+}
+.item-view .comments{
+border-radius:0 0 0px 0px;
+color:#000000;
+margin:0 8px 8px
+}
+.item-view .post-title{
+font:500 24px Ubuntu, sans-serif
+}
+.item-view .post-header{
+display:block;
+width:auto
+}
+.item-view .post-share-buttons{
+display:block;
+margin-bottom:40px;
+margin-top:20px
+}
+.item-view .post-footer{
+display:block
+}
+.item-view .post-footer a{
+color:#729c0b;
+font:500 12px Ubuntu, sans-serif;
+cursor:pointer;
+text-transform:uppercase;
+color:#729c0b
+}
+.item-view .post-footer-line{
+border:0
+}
+.item-view .sidebar-container{
+box-sizing:border-box;
+margin-left:0;
+margin-top:15px;
+max-width:280px;
+padding:0;
+width:280px
+}
+.item-view .sidebar-container .widget{
+padding:15px 0
+}
+@media (max-width:1328px){
+.item-view .centered{
+width:100%
+}
+.item-view .centered .centered-bottom{
+margin-left:auto;
+margin-right:auto;
+padding-right:0;
+padding-top:0;
+width:100%
+}
+.item-view .centered .main-container{
+float:none;
+margin:0 auto
+}
+.item-view div.section.main div.widget.PopularPosts{
+margin:0 2.5%;
+position:relative;
+top:0;
+width:95%
+}
+.item-view .bg-photo-container+.centered .main{
+margin-top:0
+}
+.item-view div.widget.Blog{
+margin:auto;
+width:100%
+}
+.item-view .post-share-buttons{
+margin-bottom:32px
+}
+.item-view .sidebar-container{
+float:none;
+margin:0;
+max-height:none;
+max-width:none;
+padding:0 15px;
+position:static;
+width:100%
+}
+.item-view .sidebar-container .section{
+margin:15px auto;
+max-width:480px
+}
+.item-view .sidebar-container .section .widget{
+position:static;
+width:100%
+}
+.item-view .vertical-ad-container{
+display:none
+}
+.item-view .blog-posts .inline-ad{
+display:block
+}
+}
+@media (max-width:745px){
+.item-view.has-subscribe .bg-photo-container,.item-view.has-subscribe .centered-bottom{
+padding-top:88px
+}
+.item-view .bg-photo,.item-view .bg-photo-container{
+width:auto;
+height:296px
+}
+.item-view .bg-photo-container+.centered .centered-bottom .post-wrapper{
+margin-top:-240px
+}
+.item-view .bg-photo-container+.centered .centered-bottom,.item-view .page_body.has-subscribe .bg-photo-container+.centered .centered-bottom{
+margin-top:0
+}
+.item-view .post-outer{
+background:#ffffff
+}
+.item-view .post-outer .post-wrapper{
+padding:16px
+}
+.item-view .comments{
+margin:0
+}
+}
+#comments{
+background:#ffffff;
+border-top:1px solid rgba(0, 0, 0, 0.12);
+margin-top:0;
+padding:32px
+}
+#comments .comment-form .title,#comments h3.title{
+position:absolute;
+clip:rect(1px,1px,1px,1px);
+padding:0;
+border:0;
+height:1px;
+width:1px;
+overflow:hidden
+}
+#comments .comment-form{
+border-bottom:1px solid rgba(0, 0, 0, 0.12);
+border-top:1px solid rgba(0, 0, 0, 0.12)
+}
+.item-view #comments .comment-form h4{
+position:absolute;
+clip:rect(1px,1px,1px,1px);
+padding:0;
+border:0;
+height:1px;
+width:1px;
+overflow:hidden
+}
+#comment-holder .continue{
+display:none
+}
+
+--></style>
+<style id="template-skin-1" type="text/css"><!--
+body#layout .hidden,
+body#layout .invisible {
+display: inherit;
+}
+body#layout .centered-bottom {
+position: relative;
+}
+body#layout .section.featured-post,
+body#layout .section.main,
+body#layout .section.vertical-ad-container {
+float: left;
+width: 55%;
+}
+body#layout .sidebar-container {
+display: inline-block;
+width: 39%;
+}
+body#layout .centered-bottom:after {
+clear: both;
+content: "";
+display: table;
+}
+body#layout .hamburger-menu,
+body#layout .search {
+display: none;
+}
+--></style>
+<script async="async" src="./Viết bài báo, luận văn bằng Latex_files/clipboard.min.js.download"></script>
+<link href="./Viết bài báo, luận văn bằng Latex_files/authorization.css" media="all" onload="if(media!=&#39;all&#39;)media=&#39;all&#39;" rel="stylesheet"><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=3277552449392957334&amp;zx=2a07ced0-f1c0-4a4c-ba4e-2b278c10b717' rel='stylesheet'/></noscript>
+<meta name="google-adsense-platform-account" content="ca-host-pub-1556223355139109">
+<meta name="google-adsense-platform-domain" content="blogspot.com">
+
+<style type="text/css" data-styled-components="FiaaB gTcftA caPIRE" data-styled-components-is-local="true">
+/* sc-component-id: sc-keyframes-FiaaB */
+@-webkit-keyframes FiaaB{100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}@keyframes FiaaB{100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}
+/* sc-component-id: sc-keyframes-gTcftA */
+@-webkit-keyframes gTcftA{10%,90%{-webkit-transform:translate3d(-1px,0,0);-ms-transform:translate3d(-1px,0,0);transform:translate3d(-1px,0,0);}20%,80%{-webkit-transform:translate3d(2px,0,0);-ms-transform:translate3d(2px,0,0);transform:translate3d(2px,0,0);}30%,50%,70%{-webkit-transform:translate3d(-4px,0,0);-ms-transform:translate3d(-4px,0,0);transform:translate3d(-4px,0,0);}40%,60%{-webkit-transform:translate3d(4px,0,0);-ms-transform:translate3d(4px,0,0);transform:translate3d(4px,0,0);}}@keyframes gTcftA{10%,90%{-webkit-transform:translate3d(-1px,0,0);-ms-transform:translate3d(-1px,0,0);transform:translate3d(-1px,0,0);}20%,80%{-webkit-transform:translate3d(2px,0,0);-ms-transform:translate3d(2px,0,0);transform:translate3d(2px,0,0);}30%,50%,70%{-webkit-transform:translate3d(-4px,0,0);-ms-transform:translate3d(-4px,0,0);transform:translate3d(-4px,0,0);}40%,60%{-webkit-transform:translate3d(4px,0,0);-ms-transform:translate3d(4px,0,0);transform:translate3d(4px,0,0);}}
+/* sc-component-id: sc-keyframes-caPIRE */
+@-webkit-keyframes caPIRE{0%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}20%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}40%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}60%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}80%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}100%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}}@keyframes caPIRE{0%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}20%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}40%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}60%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}80%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}100%{-webkit-transform:scale(.75);-ms-transform:scale(.75);transform:scale(.75);}}</style><style>@-webkit-keyframes swal2-show{0%{-webkit-transform:scale(.7);transform:scale(.7)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes swal2-show{0%{-webkit-transform:scale(.7);transform:scale(.7)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(.5);transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}100%{-webkit-transform:scale(.5);transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.875em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}100%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}100%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}50%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}80%{margin-top:-.375em;-webkit-transform:scale(1.15);transform:scale(1.15)}100%{margin-top:0;-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}50%{margin-top:1.625em;-webkit-transform:scale(.4);transform:scale(.4);opacity:0}80%{margin-top:-.375em;-webkit-transform:scale(1.15);transform:scale(1.15)}100%{margin-top:0;-webkit-transform:scale(1);transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-shown{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;box-shadow:0 0 .625em #d9d9d9;overflow-y:hidden}.swal2-popup.swal2-toast .swal2-header{flex-direction:row}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:initial;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon-text{font-size:2em;font-weight:700;line-height:1em}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{height:auto;margin:0 .3125em}.swal2-popup.swal2-toast .swal2-styled{margin:0 .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 .0625em #fff,0 0 0 .125em rgba(50,100,150,.4)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:2em;height:2.8125em;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.25em;left:-.9375em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:2em 2em;transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;-webkit-transform-origin:0 2em;transform-origin:0 2em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:showSweetToast .5s;animation:showSweetToast .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:hideSweetToast .2s forwards;animation:hideSweetToast .2s forwards}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:animate-toast-success-tip .75s;animation:animate-toast-success-tip .75s}.swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:animate-toast-success-long .75s;animation:animate-toast-success-long .75s}@-webkit-keyframes showSweetToast{0%{-webkit-transform:translateY(-.625em) rotateZ(2deg);transform:translateY(-.625em) rotateZ(2deg);opacity:0}33%{-webkit-transform:translateY(0) rotateZ(-2deg);transform:translateY(0) rotateZ(-2deg);opacity:.5}66%{-webkit-transform:translateY(.3125em) rotateZ(2deg);transform:translateY(.3125em) rotateZ(2deg);opacity:.7}100%{-webkit-transform:translateY(0) rotateZ(0);transform:translateY(0) rotateZ(0);opacity:1}}@keyframes showSweetToast{0%{-webkit-transform:translateY(-.625em) rotateZ(2deg);transform:translateY(-.625em) rotateZ(2deg);opacity:0}33%{-webkit-transform:translateY(0) rotateZ(-2deg);transform:translateY(0) rotateZ(-2deg);opacity:.5}66%{-webkit-transform:translateY(.3125em) rotateZ(2deg);transform:translateY(.3125em) rotateZ(2deg);opacity:.7}100%{-webkit-transform:translateY(0) rotateZ(0);transform:translateY(0) rotateZ(0);opacity:1}}@-webkit-keyframes hideSweetToast{0%{opacity:1}33%{opacity:.5}100%{-webkit-transform:rotateZ(1deg);transform:rotateZ(1deg);opacity:0}}@keyframes hideSweetToast{0%{opacity:1}33%{opacity:.5}100%{-webkit-transform:rotateZ(1deg);transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes animate-toast-success-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes animate-toast-success-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes animate-toast-success-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes animate-toast-success-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-shown{top:auto;right:auto;bottom:auto;left:auto;background-color:transparent}body.swal2-no-backdrop .swal2-shown>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-shown.swal2-top{top:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-top-left,body.swal2-no-backdrop .swal2-shown.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-top-end,body.swal2-no-backdrop .swal2-shown.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-shown.swal2-center{top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-left,body.swal2-no-backdrop .swal2-shown.swal2-center-start{top:50%;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-center-end,body.swal2-no-backdrop .swal2-shown.swal2-center-right{top:50%;right:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom{bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}body.swal2-no-backdrop .swal2-shown.swal2-bottom-left,body.swal2-no-backdrop .swal2-shown.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swal2-shown.swal2-bottom-right{right:0;bottom:0}.swal2-container{display:flex;position:fixed;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:10px;background-color:transparent;z-index:1060;overflow-x:hidden;-webkit-overflow-scrolling:touch}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-container.swal2-fade{transition:background-color .1s}.swal2-container.swal2-shown{background-color:rgba(0,0,0,.4)}.swal2-popup{display:none;position:relative;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1rem;box-sizing:border-box}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-popup .swal2-header{display:flex;flex-direction:column;align-items:center}.swal2-popup .swal2-title{display:block;position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-popup .swal2-actions{flex-wrap:wrap;align-items:center;justify-content:center;margin:1.25em auto 0;z-index:1}.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-confirm{width:2.5em;height:2.5em;margin:.46875em;padding:0;border:.25em solid transparent;border-radius:100%;border-color:transparent;background-color:transparent!important;color:transparent;cursor:default;box-sizing:border-box;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-cancel{margin-right:30px;margin-left:30px}.swal2-popup .swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after{display:inline-block;width:15px;height:15px;margin-left:5px;border:3px solid #999;border-radius:50%;border-right-color:transparent;box-shadow:1px 1px 1px #fff;content:'';-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal}.swal2-popup .swal2-styled{margin:.3125em;padding:.625em 2em;font-weight:500;box-shadow:none}.swal2-popup .swal2-styled:not([disabled]){cursor:pointer}.swal2-popup .swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#3085d6;color:#fff;font-size:1.0625em}.swal2-popup .swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#aaa;color:#fff;font-size:1.0625em}.swal2-popup .swal2-styled:focus{outline:0;box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(50,100,150,.4)}.swal2-popup .swal2-styled::-moz-focus-inner{border:0}.swal2-popup .swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-popup .swal2-image{max-width:100%;margin:1.25em auto}.swal2-popup .swal2-close{position:absolute;top:0;right:0;justify-content:center;width:1.2em;height:1.2em;padding:0;transition:color .1s ease-out;border:none;border-radius:0;outline:initial;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer;overflow:hidden}.swal2-popup .swal2-close:hover{-webkit-transform:none;transform:none;color:#f27474}.swal2-popup>.swal2-checkbox,.swal2-popup>.swal2-file,.swal2-popup>.swal2-input,.swal2-popup>.swal2-radio,.swal2-popup>.swal2-select,.swal2-popup>.swal2-textarea{display:none}.swal2-popup .swal2-content{justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;font-weight:300;line-height:normal;z-index:1;word-wrap:break-word}.swal2-popup #swal2-content{text-align:center}.swal2-popup .swal2-checkbox,.swal2-popup .swal2-file,.swal2-popup .swal2-input,.swal2-popup .swal2-radio,.swal2-popup .swal2-select,.swal2-popup .swal2-textarea{margin:1em auto}.swal2-popup .swal2-file,.swal2-popup .swal2-input,.swal2-popup .swal2-textarea{width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;font-size:1.125em;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);box-sizing:border-box}.swal2-popup .swal2-file.swal2-inputerror,.swal2-popup .swal2-input.swal2-inputerror,.swal2-popup .swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-popup .swal2-file:focus,.swal2-popup .swal2-input:focus,.swal2-popup .swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 3px #c4e6f5}.swal2-popup .swal2-file::-webkit-input-placeholder,.swal2-popup .swal2-input::-webkit-input-placeholder,.swal2-popup .swal2-textarea::-webkit-input-placeholder{color:#ccc}.swal2-popup .swal2-file:-ms-input-placeholder,.swal2-popup .swal2-input:-ms-input-placeholder,.swal2-popup .swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-popup .swal2-file::-ms-input-placeholder,.swal2-popup .swal2-input::-ms-input-placeholder,.swal2-popup .swal2-textarea::-ms-input-placeholder{color:#ccc}.swal2-popup .swal2-file::placeholder,.swal2-popup .swal2-input::placeholder,.swal2-popup .swal2-textarea::placeholder{color:#ccc}.swal2-popup .swal2-range input{width:80%}.swal2-popup .swal2-range output{width:20%;font-weight:600;text-align:center}.swal2-popup .swal2-range input,.swal2-popup .swal2-range output{height:2.625em;margin:1em auto;padding:0;font-size:1.125em;line-height:2.625em}.swal2-popup .swal2-input{height:2.625em;padding:0 .75em}.swal2-popup .swal2-input[type=number]{max-width:10em}.swal2-popup .swal2-file{font-size:1.125em}.swal2-popup .swal2-textarea{height:6.75em;padding:.75em}.swal2-popup .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;color:#545454;font-size:1.125em}.swal2-popup .swal2-checkbox,.swal2-popup .swal2-radio{align-items:center;justify-content:center}.swal2-popup .swal2-checkbox label,.swal2-popup .swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-popup .swal2-checkbox input,.swal2-popup .swal2-radio input{margin:0 .4em}.swal2-popup .swal2-validation-message{display:none;align-items:center;justify-content:center;padding:.625em;background:#f0f0f0;color:#666;font-size:1em;font-weight:300;overflow:hidden}.swal2-popup .swal2-validation-message::before{display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center;content:'!';zoom:normal}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-moz-document url-prefix(){.swal2-close:focus{outline:2px solid rgba(50,100,150,.4)}}.swal2-icon{position:relative;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;line-height:5em;cursor:default;box-sizing:content-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;zoom:normal}.swal2-icon-text{font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:3.75em 3.75em;transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 3.75em;transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;top:-.25em;left:-.25em;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%;z-index:2;box-sizing:content-box}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;top:.5em;left:1.625em;width:.4375em;height:5.625em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);z-index:1}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;height:.3125em;border-radius:.125em;background-color:#a5dc86;z-index:2}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.875em;width:1.5625em;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal2-progresssteps{align-items:center;margin:0 0 1.25em;padding:0;font-weight:600}.swal2-progresssteps li{display:inline-block;position:relative}.swal2-progresssteps .swal2-progresscircle{width:2em;height:2em;border-radius:2em;background:#3085d6;color:#fff;line-height:2em;text-align:center;z-index:20}.swal2-progresssteps .swal2-progresscircle:first-child{margin-left:0}.swal2-progresssteps .swal2-progresscircle:last-child{margin-right:0}.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep{background:#3085d6}.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progresscircle{background:#add8e6}.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progressline{background:#add8e6}.swal2-progresssteps .swal2-progressline{width:2.5em;height:.4em;margin:0 -1px;background:#3085d6;z-index:10}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-show.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-hide.swal2-noanimation{-webkit-animation:none;animation:none}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-animate-success-icon .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-animate-success-icon .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-animate-success-icon .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-animate-error-icon{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-animate-error-icon .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}@-webkit-keyframes swal2-rotate-loading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:initial!important}}</style><style>
+      .ejoy-sub-active{
+        color: #1296ba !important;
+      }
+      
+      .ejoy-sub-hovered{
+        color: #1296ba !important;
+      }
+      .ejoy-sub-clzz{
+        cursor: pointer;
+        
+        lineHeight: 1.2;
+          font-size: 28px;
+          color: #FFCC00; background: rgba(17, 17, 17, 0.7);
+        
+      }
+      .ejoy-sub-clzz:hover{
+        color: #1296ba !important;
+      }
+      .ej-trans-sub{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999999;
+        cursor: move;
+      }
+      .ej-trans-sub > span{
+        color: #3CF9ED;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 16px;
+        line-height: 1.5;
+        background: rgba(32, 26, 25, 0.8);
+        // text-shadow: 0px 1px 4px black;
+        padding: 0 8px;
+        
+        lineHeight: 1.2;
+        font-size: 16px;
+        color: #0CB1C7; background: rgba(67, 65, 65, 0.7);
+      
+      }
+      .ej-full-screen-video{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 30px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999999;
+        cursor: pointer;
+      }
+      .ej-main-sub{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999999;
+        cursor: move;
+        padding: 0 8px;
+      }
+      .ej-main-sub > span{
+        color: white;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        background: rgba(32, 26, 25, 0.8);
+        padding: 2px 8px;
+        
+        lineHeight: 1.2;
+          font-size: 28px;
+          color: #FFCC00; background: rgba(17, 17, 17, 0.7);
+        
+      }
+
+      .ej-main-sub .ejoy-sub-clzz{
+        background: transparent !important
+      }
+
+      .tran-subtitle > span{
+        cursor: pointer;
+        padding-left: 10px;
+        top: 2px;
+        position: relative;
+      }
+
+      .tran-subtitle > span > span{
+        position: absolute;
+        top: -170%;
+        background: rgba(0,0,0,0.5);
+        font-size: 13px;
+        line-height: 20px;
+        padding: 2px 8px;
+        color: white;
+        display: none;
+        border-radius: 4px;
+        white-space: nowrap;
+        left: -50%;
+        font-weight: normal;
+      }
+
+      .view-icon-copy-main-sub:hover > span,
+      .view-icon-edit-sub:hover > span,
+      .view-icon-exit-full-sub:hover > span,
+      .view-icon-full-sub:hover > span,
+      .view-icon-copy-tran-sub:hover > span {
+        display: block;
+      }
+
+      .view-icon-full-sub, .view-icon-exit-full-sub {
+        display: flex;
+      }
+
+      .view-icon-full-sub > svg, .view-icon-exit-full-sub > svg {
+        pointer-events: none;
+      }
+
+      .tran-subtitle > span > svg{
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+        display: inline-flex !important;
+        vertical-align: baseline !important;
+      }
+      
+      .view-icon-copy-main-sub > svg{
+        pointer-events: none;
+        color: #FFCC00
+      }
+
+      .view-icon-copy-tran-sub{
+        padding-left: 0 !important;
+        padding-right: 8px !important;
+      }
+      .view-icon-copy-tran-sub > svg{
+        pointer-events: none;
+        color: #0CB1C7
+      }
+
+
+      </style></head>
+<body class="item-view version-1-3-3 variant-vegeclub_light" data-js-state="loaded">
+<a class="skip-navigation" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html#main" tabindex="0">
+Chuyển đến nội dung chính
+</a>
+<div class="page">
+<div class="page_body">
+<style>
+    .bg-photo {background-image:url(\/\/3.bp.blogspot.com\/-afbjZgxFM7g\/UIKeINVl0UI\/AAAAAAAABlQ\/xriDG9XzTu4\/s1600\/LaTeX_Logo.png);}
+    
+@media (max-width: 200px) { .bg-photo {background-image:url(\/\/3.bp.blogspot.com\/-afbjZgxFM7g\/UIKeINVl0UI\/AAAAAAAABlQ\/xriDG9XzTu4\/w200\/LaTeX_Logo.png);}}
+@media (max-width: 400px) and (min-width: 201px) { .bg-photo {background-image:url(\/\/3.bp.blogspot.com\/-afbjZgxFM7g\/UIKeINVl0UI\/AAAAAAAABlQ\/xriDG9XzTu4\/w400\/LaTeX_Logo.png);}}
+@media (max-width: 800px) and (min-width: 401px) { .bg-photo {background-image:url(\/\/3.bp.blogspot.com\/-afbjZgxFM7g\/UIKeINVl0UI\/AAAAAAAABlQ\/xriDG9XzTu4\/w800\/LaTeX_Logo.png);}}
+@media (max-width: 1200px) and (min-width: 801px) { .bg-photo {background-image:url(\/\/3.bp.blogspot.com\/-afbjZgxFM7g\/UIKeINVl0UI\/AAAAAAAABlQ\/xriDG9XzTu4\/w1200\/LaTeX_Logo.png);}}
+/* Last tag covers anything over one higher than the previous max-size cap. */
+@media (min-width: 1201px) { .bg-photo {background-image:url(\/\/3.bp.blogspot.com\/-afbjZgxFM7g\/UIKeINVl0UI\/AAAAAAAABlQ\/xriDG9XzTu4\/w1600\/LaTeX_Logo.png);}}
+  </style>
+<div class="bg-photo-container">
+<div class="bg-photo"></div>
+</div>
+<div class="centered">
+<header class="centered-top-container sticky" role="banner">
+<div class="centered-top">
+<a class="return_link" href="https://tuanubicom.blogspot.com/">
+<svg class="svg-icon-24 touch-icon back-button rtl-reversible-icon">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_arrow_back_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</a>
+<div class="blog-name">
+<div class="section" id="header" name="Tiêu đề"><div class="widget Header" data-version="2" id="Header1">
+<div class="header-widget">
+<div>
+<h1>
+<a href="https://tuanubicom.blogspot.com/">
+Hạnh phúc là trải nghiệm trong cuộc hành trình
+</a>
+</h1>
+</div>
+</div>
+</div></div>
+</div>
+<div class="search">
+<button aria-label="Tìm kiếm" class="search-expand touch-icon-button">
+<div class="search-expand-text">Tìm kiếm</div>
+<svg class="svg-icon-24 touch-icon search-expand-icon">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_search_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</button>
+<div class="section" id="search_top" name="Search (Top)"><div class="widget BlogSearch" data-version="2" id="BlogSearch1">
+<h3 class="title">
+Tìm kiếm Blog này
+</h3>
+<div class="widget-content" role="search">
+<form action="https://tuanubicom.blogspot.com/search" target="_top">
+<div class="search-input">
+<input aria-label="Tìm kiếm blog này" autocomplete="off" name="q" placeholder="Tìm kiếm blog này" value="">
+</div>
+<label class="search-submit-container">
+<input type="submit">
+<svg class="svg-icon-24 touch-icon search-icon">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_search_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</label>
+</form>
+</div>
+</div></div>
+<div class="dim-overlay hidden"></div></div>
+</div>
+</header>
+<div class="centered-bottom">
+<main class="main-container" id="main" role="main" tabindex="-1">
+<div class="featured-post section" id="featured_post" name="Featured Post">
+</div>
+<div class="main section" id="page_body" name="Phần chính của trang"><div class="widget Blog" data-version="2" id="Blog1">
+<div class="blog-posts hfeed container">
+<article class="post-outer-container">
+<div class="post-outer">
+<div class="post-wrapper not-hero post-3703677968946293052 image">
+<div class="snippet-thumbnail-container">
+<div class="snippet-thumbnail post-thumb-3703677968946293052"></div>
+</div>
+<div class="slide">
+<div class="post">
+<script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tuanubicom.blogspot.com/2012/10/writinginlatex.html"
+  },
+  "headline": "Viết bài báo, luận văn bằng Latex","description": "Latex là một ngôn ngữ định dạng văn bản dùng để sinh ra tài liệu phục vụ xuất bản, in ấn. Latex đặc biệt được sử dụng rộng rãi trong gi...","datePublished": "2012-10-20T19:45:00+07:00",
+  "dateModified": "2021-08-08T10:53:06+07:00","image": {
+    "@type": "ImageObject","url": "//3.bp.blogspot.com/-afbjZgxFM7g/UIKeINVl0UI/AAAAAAAABlQ/xriDG9XzTu4/w1200-h630-p-k-no-nu/LaTeX_Logo.png",
+    "height": 630,
+    "width": 1200},"publisher": {
+    "@type": "Organization",
+    "name": "Blogger",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/",
+      "width": 206,
+      "height": 60
+    }
+  },"author": {
+    "@type": "Person",
+    "name": "Dr. Tuan A. Nguyen"
+  }
+}</script>
+<div class="post-title-container">
+<a name="3703677968946293052"></a>
+<h3 class="post-title entry-title">
+Viết bài báo, luận văn bằng Latex 
+</h3>
+</div>
+<div class="post-header">
+<div class="post-header-line-1">
+<span class="byline post-timestamp">
+<meta content="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html">
+<a class="timestamp-link" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" rel="bookmark" title="permanent link">
+<time class="published" datetime="2012-10-20T19:45:00+07:00" title="2012-10-20T19:45:00+07:00">
+tháng 10 20, 2012
+</time>
+</a>
+</span>
+</div>
+</div>
+<div class="post-share-buttons post-share-buttons-top">
+<div class="byline post-share-buttons goog-inline-block">
+<div aria-owns="sharing-popup-Blog1-byline-3703677968946293052" class="sharing" data-title="Viết bài báo, luận văn bằng Latex ">
+<button aria-controls="sharing-popup-Blog1-byline-3703677968946293052" aria-label="Chia sẻ" class="sharing-button touch-icon-button" id="sharing-button-Blog1-byline-3703677968946293052" role="button" aria-expanded="false" aria-haspopup="true">
+<div class="flat-icon-button ripple">
+<svg class="svg-icon-24">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_share_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</div>
+</button>
+<div class="share-buttons-container">
+<ul aria-hidden="true" aria-label="Chia sẻ" class="share-buttons hidden" id="sharing-popup-Blog1-byline-3703677968946293052" role="menu">
+<li>
+<span aria-label="Nhận đường liên kết" class="sharing-platform-button sharing-element-link" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Nhận đường liên kết">
+<svg class="svg-icon-24 touch-icon sharing-link">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_link_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Nhận đường liên kết</span>
+</span>
+</li>
+<li>
+<span aria-label="Chia sẻ với Facebook" class="sharing-platform-button sharing-element-facebook" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=facebook" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với Facebook">
+<svg class="svg-icon-24 touch-icon sharing-facebook">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_facebook_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Facebook</span>
+</span>
+</li>
+<li>
+<span aria-label="Chia sẻ với Twitter" class="sharing-platform-button sharing-element-twitter" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=twitter" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với Twitter">
+<svg class="svg-icon-24 touch-icon sharing-twitter">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_twitter_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Twitter</span>
+</span>
+</li>
+<li>
+<span aria-label="Chia sẻ với Pinterest" class="sharing-platform-button sharing-element-pinterest" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=pinterest" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với Pinterest">
+<svg class="svg-icon-24 touch-icon sharing-pinterest">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_pinterest_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Pinterest</span>
+</span>
+</li>
+<li>
+<span aria-label="Email" class="sharing-platform-button sharing-element-email" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=email" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Email">
+<svg class="svg-icon-24 touch-icon sharing-email">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_email_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Email</span>
+</span>
+</li>
+<li aria-hidden="true" class="hidden">
+<span aria-label="Chia sẻ với ứng dụng khác" class="sharing-platform-button sharing-element-other" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với ứng dụng khác">
+<svg class="svg-icon-24 touch-icon sharing-sharingOther">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_more_horiz_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Ứng dụng khác</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="post-body entry-content float-container" id="post-body-3703677968946293052">
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="./Viết bài báo, luận văn bằng Latex_files/LaTeX_Logo.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="./Viết bài báo, luận văn bằng Latex_files/LaTeX_Logo.png"></a></div>
+<br>
+Latex là một ngôn ngữ định dạng văn bản dùng để sinh ra tài liệu phục vụ xuất bản, in ấn. Latex đặc biệt được sử dụng rộng rãi trong giới khoa học, học thuật bởi tính chính xác, mỹ thuật và tiện lợi.<br>
+<br>
+Nếu ai đã từng biết qua ngôn ngữ HTML hay đã từng lập trình một chương trình đơn giản, thì việc tiếp cận Latex sẽ được thuận lợi hơn rất nhiều. Tuy nhiên, nếu ai chưa từng trải qua kinh nghiệm lập trình, thì việc dùng Latex cũng sẽ là một trải nghiệm tuyệt vời.<br>
+<br>
+<h2>
+<b>Vì sao vậy?&nbsp;</b></h2>
+Latex giúp ta "biên dịch" một văn bản text thô thành một bản in PDF tuyệt đẹp. Nó đặc biệt hữu dụng khi viết bài cho các hội nghị, tạp chí khoa học khác nhau, bởi vì sự thống nhất định dạng, tham khảo chéo, viết trích dẫn chính xác và hơn hết, người viết không phải lo về định dạng.<br>
+<b>Tips:</b><br>
+Hiện tại các hội nghị , journals của <a href="http://www.acm.org/sigs/publications/proceedings-templates" target="_blank">ACM</a>, <a href="http://www.ieee.org/conferences_events/conferences/publishing/templates.html" target="_blank">IEEE</a>, <a href="http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0" target="_blank">Springer</a>, <a href="http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/" target="_blank">Cambridge PhD thesis</a>, ... đều có hỗ trợ và khuýến khích tác giả dùng Latex. Cho nên các bạn nên luyện latex có những hỗ trợ rất tốt.<br>
+<br>
+<h2>
+<b>Làm thế nào để tạo file PDF ?&nbsp;</b>&nbsp;</h2>
+Một cách tối giản, có thể hiểu quá trình biên dịch file tex thành PDF như sau:<br>
+<div style="text-align: center;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b>Soạn thảo &nbsp;Latex file ==&gt; Trình biên dịch ==&gt; File PDF/PS/DVI.</b></div>
+<br>
+<b>Latex file</b> là một file văn bản Hello.tex được viết bằng raw text có dạng như sau:<br>
+<pre><span style="color: red;">\<b>documentclass</b></span>[12pt]{article}</pre>
+<pre><span style="color: #0000cc;">\<b>begin</b></span>{document}</pre>
+<pre>Hello Latex </pre>
+<pre><span style="color: #0000cc;">\<b>end</b></span>{document}</pre>
+<pre></pre>
+<pre></pre>
+<div><br></div><div>Nếu muốn gõ Tiếng Việt thì dùng gói <b>babel</b> với option là <b>vietnamese</b></div><div><pre><span style="color: red;">\<b>documentclass</b></span>[12pt]{article}</pre><pre><span style="color: red;">\<b>usepackage</b></span>[vietnamese]{babel}</pre><pre><span style="color: #0000cc;">\<b>begin</b></span>{document}</pre><pre>Chào mừng các bạn đến với LaTeX Tiếng Việt  </pre><pre><span style="color: #0000cc;">\<b>end</b></span>{document}</pre></div><div><div>&nbsp;</div></div><br>
+Ta có thể dùng Notepad để soạn, hoặc Notepad++, hoặc các trình soạn thảo latex chuyên dụng: <a href="http://www.xm1math.net/texmaker/" target="_blank">TexMaker</a> (Java, Cross platform: Windows, Linux, MacOSX, tôi đang dùng phần mềm này), <a href="http://www.texniccenter.org/" target="_blank">TexnicCenter</a>&nbsp;(Java, Cross platform)&nbsp;hay <a href="http://www.winedt.com/" target="_blank">WinEdt </a>(Windows Only). <br>
+<div class="separator" style="clear: both; text-align: center;">
+<br></div>
+<h2>
+<b>Trình biên dịch</b></h2>
+Để biên dịch file này thành file PDF, ta cần phải có một bộ "trình biên dịch".<br>
+<br>
+<ul>
+<li><i>Trên Linux</i>: Tex-live,&nbsp;<u><i>Example</i></u>: Ubuntu: apt-get install tex-live</li>
+<li><i>Trên Windows</i>: Miktex (http://miktex.org/download). Nhớ download bộ full về máy để cài. Nếu bạn mới sử dụng latex, cái bộ basic đôi khi thiếu packages dễ nản lắm.</li>
+<li><i>Trên MacOSX:</i> Vào trang này để download MacTex&nbsp;<a href="http://www.tug.org/mactex/2011/">http://www.tug.org/mactex/2011/</a>&nbsp;Download package này&nbsp;<a href="http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip">http://mirror.ctan.org/systems/mac/mactex/MacTeX.mpkg.zip</a></li>
+</ul>
+<br>
+<h2>
+<b>Biên dịch văn bản đầu tiên "Hello Latex"&nbsp;</b></h2>
+Để học và luyện Latex thành công, đòi hỏi bạn phải tốn một khoảng thời gian nhất định, từ 1 đến 2 tháng. Nhưng với sự trợ giúp của Giáo Sư Google thì hầu như mọi thắc mắc của bạn đều được giải đáp.<br>
+Sau khi soạn thảo xong file Hello.tex dùng TexMaker, ta bấm vào nút Quick Build. Ta sẽ có được file Hello.pdf<br>
+<h2>
+<b>Viết paper bằng Latex:&nbsp;</b></h2>
+Download các file template của hội nghị yêu cầu và tập thay đổi nội dung bên trong, và biên dịch lại để tìm hiểu.<br>
+<h2>
+<b>Học Latex ở đâu:&nbsp;</b></h2>
+Có rất nhiều tài liệu dạy Latex rất tốt, các bạn có thể tìm hiểu thêm ở đây.<br>
+<br>
+<ul>
+<li><a href="http://ece.uprm.edu/~caceros/latex/introduction.pdf">http://ece.uprm.edu/~caceros/latex/introduction.pdf</a>&nbsp;&nbsp;</li>
+<li><a href="http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/">http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/</a></li>
+<li><a href="http://en.wikibooks.org/wiki/LaTeX">http://en.wikibooks.org/wiki/LaTeX</a></li>
+</ul>
+<br>
+<h2>
+<b>Kết luận</b>&nbsp;</h2>
+Latex sẽ khó khăn lúc ban đầu mới học. Nhưng một khi đã quen với nó rồi, bạn sẽ thích ngay và lúc đó latex sẽ trở nên không thể thiếu được khi viết bài, bởi vì bạn sẽ không phải loay hoay cân chỉnh hình ảnh, format, định dạng paper, chỉnh font chữ như khi sử dụng những chương trình soạn thảo thông minh (WYSIWYG) khác.<br>
+<br>
+Tóm lại, nếu bạn muốn viết bài báo đẹp, chính xác và an tâm rằng bài báo đúng chuẩn quy định, thì Latex là một lựa chọn tối ưu. Chúc các bạn luôn thành công với các xuất phẩm của mình.<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="./Viết bài báo, luận văn bằng Latex_files/LaTeX_Logo.png" style="margin-left: 1em; margin-right: 1em; text-align: center;"><img border="0" src="./Viết bài báo, luận văn bằng Latex_files/LaTeX_Logo.png"></a></div>
+</div>
+<div class="post-footer container">
+<div class="post-footer-line post-footer-line-1">
+</div>
+<div class="post-footer-line post-footer-line-2">
+</div>
+<div class="post-footer-line post-footer-line-3">
+</div>
+<div class="post-share-buttons post-share-buttons-bottom">
+<div class="byline post-share-buttons goog-inline-block">
+<div aria-owns="sharing-popup-Blog1-byline-3703677968946293052" class="sharing" data-title="Viết bài báo, luận văn bằng Latex ">
+<button aria-controls="sharing-popup-Blog1-byline-3703677968946293052" aria-label="Chia sẻ" class="sharing-button touch-icon-button" id="sharing-button-Blog1-byline-3703677968946293052" role="button" aria-expanded="false" aria-haspopup="true">
+<div class="flat-icon-button ripple">
+<svg class="svg-icon-24">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_share_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</div>
+</button>
+<div class="share-buttons-container">
+<ul aria-hidden="true" aria-label="Chia sẻ" class="share-buttons hidden" id="sharing-popup-Blog1-byline-3703677968946293052" role="menu">
+<li>
+<span aria-label="Nhận đường liên kết" class="sharing-platform-button sharing-element-link" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Nhận đường liên kết">
+<svg class="svg-icon-24 touch-icon sharing-link">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_link_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Nhận đường liên kết</span>
+</span>
+</li>
+<li>
+<span aria-label="Chia sẻ với Facebook" class="sharing-platform-button sharing-element-facebook" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=facebook" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với Facebook">
+<svg class="svg-icon-24 touch-icon sharing-facebook">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_facebook_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Facebook</span>
+</span>
+</li>
+<li>
+<span aria-label="Chia sẻ với Twitter" class="sharing-platform-button sharing-element-twitter" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=twitter" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với Twitter">
+<svg class="svg-icon-24 touch-icon sharing-twitter">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_twitter_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Twitter</span>
+</span>
+</li>
+<li>
+<span aria-label="Chia sẻ với Pinterest" class="sharing-platform-button sharing-element-pinterest" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=pinterest" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với Pinterest">
+<svg class="svg-icon-24 touch-icon sharing-pinterest">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_pinterest_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Pinterest</span>
+</span>
+</li>
+<li>
+<span aria-label="Email" class="sharing-platform-button sharing-element-email" data-href="https://www.blogger.com/share-post.g?blogID=3277552449392957334&amp;postID=3703677968946293052&amp;target=email" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Email">
+<svg class="svg-icon-24 touch-icon sharing-email">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_24_email_dark" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Email</span>
+</span>
+</li>
+<li aria-hidden="true" class="hidden">
+<span aria-label="Chia sẻ với ứng dụng khác" class="sharing-platform-button sharing-element-other" data-url="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" role="menuitem" tabindex="-1" title="Chia sẻ với ứng dụng khác">
+<svg class="svg-icon-24 touch-icon sharing-sharingOther">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_more_horiz_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+<span class="platform-sharing-text">Ứng dụng khác</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="comments threaded" data-embed="true" data-num-comments="7" id="comments">
+<a name="comments"></a>
+<h3 class="title">Nhận xét</h3>
+<div class="comments-content">
+<script async="async" src="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html" type="text/javascript"></script>
+<script type="text/javascript">(function(){/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+var ba=function(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}},n="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a},ca=function(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");
+},r=ca(this),t=function(a,b){if(b)a:{var c=r;a=a.split(".");for(var e=0;e<a.length-1;e++){var d=a[e];if(!(d in c))break a;c=c[d]}a=a[a.length-1];e=c[a];b=b(e);b!=e&&null!=b&&n(c,a,{configurable:!0,writable:!0,value:b})}};
+t("Symbol",function(a){if(a)return a;var b=function(g,p){this.$jscomp$symbol$id_=g;n(this,"description",{configurable:!0,writable:!0,value:p})};b.prototype.toString=function(){return this.$jscomp$symbol$id_};var c="jscomp_symbol_"+(1E9*Math.random()>>>0)+"_",e=0,d=function(g){if(this instanceof d)throw new TypeError("Symbol is not a constructor");return new b(c+(g||"")+"_"+e++,g)};return d});
+t("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");for(var b="Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "),c=0;c<b.length;c++){var e=r[b[c]];"function"===typeof e&&"function"!=typeof e.prototype[a]&&n(e.prototype,a,{configurable:!0,writable:!0,value:function(){return da(ba(this))}})}return a});
+var da=function(a){a={next:a};a[Symbol.iterator]=function(){return this};return a},ea=function(a,b){a instanceof String&&(a+="");var c=0,e=!1,d={next:function(){if(!e&&c<a.length){var g=c++;return{value:b(g,a[g]),done:!1}}e=!0;return{done:!0,value:void 0}}};d[Symbol.iterator]=function(){return d};return d};t("Array.prototype.entries",function(a){return a?a:function(){return ea(this,function(b,c){return[b,c]})}});
+var v=this||self,w=function(a,b){function c(){}c.prototype=b.prototype;a.superClass_=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.base=function(e,d,g){for(var p=Array(arguments.length-2),q=2;q<arguments.length;q++)p[q-2]=arguments[q];return b.prototype[d].apply(e,p)}},x=function(a){return a};function y(a,b){if(Error.captureStackTrace)Error.captureStackTrace(this,y);else{var c=Error().stack;c&&(this.stack=c)}a&&(this.message=String(a));void 0!==b&&(this.cause=b)}w(y,Error);y.prototype.name="CustomError";function z(a,b){a=a.split("%s");for(var c="",e=a.length-1,d=0;d<e;d++)c+=a[d]+(d<b.length?b[d]:"%s");y.call(this,c+a[e])}w(z,y);z.prototype.name="AssertionError";var A=function(a,b){throw new z("Failure"+(a?": "+a:""),Array.prototype.slice.call(arguments,1));};var E;var G=function(a,b){this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_=b===F?a:""};G.prototype.toString=function(){return this.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_+""};var F={};var fa=function(){var a=document;var b="SCRIPT";"application/xhtml+xml"===a.contentType&&(b=b.toLowerCase());return a.createElement(b)};var H=function(a,b){this.name=a;this.value=b};H.prototype.toString=function(){return this.name};var I=new H("OFF",Infinity),ha=new H("WARNING",900),ia=new H("CONFIG",700),J=function(){this.capacity_=0;this.clear()},K;J.prototype.clear=function(){this.buffer_=Array(this.capacity_);this.curIndex_=-1;this.isFull_=!1};var L=function(a,b,c){this.reset(a||I,b,c,void 0,void 0)};L.prototype.reset=function(){};
+var M=function(a,b){this.level=null;this.handlers=[];this.parent=(void 0===b?null:b)||null;this.children=[];this.logger={getName:function(){return a}}},O=function(a){if(a.level)return a.level;if(a.parent)return O(a.parent);A("Root logger has no level set.");return I},ja=function(a,b){for(;a;)a.handlers.forEach(function(c){c(b)}),a=a.parent},ka=function(){this.entries={};var a=new M("");a.level=ia;this.entries[""]=a},P,Q=function(a,b){var c=a.entries[b];if(c)return c;c=Q(a,b.slice(0,Math.max(b.lastIndexOf("."),
+0)));var e=new M(b,c);a.entries[b]=e;c.children.push(e);return e},R=function(){P||(P=new ka);return P};/*
+
+ SPDX-License-Identifier: Apache-2.0
+*/
+var S=[],T=function(a){var b;if(b=Q(R(),"safevalues").logger){var c="A URL with content '"+a+"' was sanitized away.",e=ha;if(a=b)if(a=b&&e){a=e.value;var d=b?O(Q(R(),b.getName())):I;a=a>=d.value}if(a){e=e||I;a=Q(R(),b.getName());"function"===typeof c&&(c=c());K||(K=new J);d=K;b=b.getName();if(0<d.capacity_){var g=(d.curIndex_+1)%d.capacity_;d.curIndex_=g;d.isFull_?(d=d.buffer_[g],d.reset(e,c,b),b=d):(d.isFull_=g==d.capacity_-1,b=d.buffer_[g]=new L(e,c,b))}else b=new L(e,c,b);ja(a,b)}}};
+-1===S.indexOf(T)&&S.push(T);function la(a,b){if(b instanceof G&&b.constructor===G)b=b.privateDoNotAccessOrElseTrustedResourceUrlWrappedValue_;else{var c=typeof b;A("expected object of type TrustedResourceUrl, got '"+b+"' of type "+("object"!=c?c:b?Array.isArray(b)?"array":c:"null"));b="type_error:TrustedResourceUrl"}a.src=b;var e,d;(e=(b=null==(d=(e=(a.ownerDocument&&a.ownerDocument.defaultView||window).document).querySelector)?void 0:d.call(e,"script[nonce]"))?b.nonce||b.getAttribute("nonce")||"":"")&&a.setAttribute("nonce",
+e)};function ma(a){a=null===a?"null":void 0===a?"undefined":a;if("string"!==typeof a)throw Error("Expected a string");if(void 0===E){var b=null;var c=v.trustedTypes;if(c&&c.createPolicy)try{b=c.createPolicy("goog#html",{createHTML:x,createScript:x,createScriptURL:x})}catch(e){v.console&&v.console.error(e.message)}E=b}a=(b=E)?b.createScriptURL(a):a;return new G(a,F)};var na=function(a,b,c){var e=null;a&&0<a.length&&(e=parseInt(a[a.length-1].timestamp,10)+1);var d=null,g=null,p=void 0,q=null,B=(window.location.hash||"#").substring(1),X,Y;/^comment-form_/.test(B)?X=B.substring(13):/^c[0-9]+$/.test(B)&&(Y=B.substring(1));var oa={id:c.postId,data:a,loadNext:function(l){if(e){var k=c.feed+"?alt=json&v=2&orderby=published&reverse=false&max-results=50";e&&(k+="&published-min="+(new Date(e)).toISOString());window.bloggercomments=function(C){e=null;var u=[];if(C&&C.feed&&
+C.feed.entry)for(var f,Z=0;f=C.feed.entry[Z];Z++){var m={},h=/blog-(\d+).post-(\d+)/.exec(f.id.$t);m.id=h?h[2]:null;a:{h=void 0;var aa=f&&(f.content&&f.content.$t||f.summary&&f.summary.$t)||"";if(f&&f.gd$extendedProperty)for(h in f.gd$extendedProperty)if("blogger.contentRemoved"==f.gd$extendedProperty[h].name){h='<span class="deleted-comment">'+aa+"</span>";break a}h=aa}m.body=h;m.timestamp=Date.parse(f.published.$t)+"";f.author&&f.author.constructor===Array&&(h=f.author[0])&&(m.author={name:h.name?
+h.name.$t:void 0,profileUrl:h.uri?h.uri.$t:void 0,avatarUrl:h.gd$image?h.gd$image.src:void 0});f.link&&(f.link[2]&&(m.link=m.permalink=f.link[2].href),f.link[3]&&(h=/.*comments\/default\/(\d+)\?.*/.exec(f.link[3].href))&&h[1]&&(m.parentId=h[1]));m.deleteclass="item-control blog-admin";if(f.gd$extendedProperty)for(var D in f.gd$extendedProperty)"blogger.itemClass"==f.gd$extendedProperty[D].name?m.deleteclass+=" "+f.gd$extendedProperty[D].value:"blogger.displayTime"==f.gd$extendedProperty[D].name&&
+(m.displayTime=f.gd$extendedProperty[D].value);u.push(m)}e=50>u.length?null:parseInt(u[u.length-1].timestamp,10)+1;l(u);window.bloggercomments=null};var N=fa();N.type="text/javascript";la(N,ma(k+"&callback=bloggercomments"));document.getElementsByTagName("head")[0].appendChild(N)}},hasMore:function(){return!!e},getMeta:function(l,k){return"iswriter"==l?k.author&&k.author.name==c.authorName&&k.author.profileUrl==c.authorUrl?"true":"":"deletelink"==l?c.baseUri+"/delete-comment.g?blogID="+c.blogId+"&postID="+
+k.id:"deleteclass"==l?k.deleteclass:""},onReply:function(l,k){null==d&&(d=document.getElementById("comment-editor"),null!=d&&(q=d.style.height,d.style.display="block",g=d.src.split("#")));d&&l&&l!==p&&(document.getElementById(k).insertBefore(d,null),k=g[0]+(l?"&parentID="+l:""),g[1]&&(k=k+"#"+g[1]),d.src=k,d.style.height=q||d.style.height,p=l,d.removeAttribute("data-resized"),d.dispatchEvent(new Event("iframeMoved")))},rendered:!0,initComment:Y,initReplyThread:X,config:{maxDepth:c.maxThreadDepth},
+messages:b};a=function(){if(window.goog&&window.goog.comments){var l=document.getElementById("comment-holder");window.goog.comments.render(l,oa)}};window.goog&&window.goog.comments?a():(window.goog=window.goog||{},window.goog.comments=window.goog.comments||{},window.goog.comments.loadQueue=window.goog.comments.loadQueue||[],window.goog.comments.loadQueue.push(a))},U=["blogger","widgets","blog","initThreadedComments"],V=v;U[0]in V||"undefined"==typeof V.execScript||V.execScript("var "+U[0]);
+for(var W;U.length&&(W=U.shift());)U.length||void 0===na?V=V[W]&&V[W]!==Object.prototype[W]?V[W]:V[W]={}:V[W]=na;}).call(this);
+</script>
+<script type="text/javascript">
+    blogger.widgets.blog.initThreadedComments(
+        null,
+        null,
+        {});
+  </script>
+<div id="comment-holder">
+<div class="comment-thread toplevel-thread"><ol id="top-ra"><li class="comment" id="c3744978741811268494"><div class="avatar-image-container"><img src="./Viết bài báo, luận văn bằng Latex_files/blogger_logo_round_35.png" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/09499173801666861876" rel="nofollow">Vinh Nguyen UIT</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html?showComment=1356012755791#c3744978741811268494">lúc 21:12 20 tháng 12, 2012</a></span></div><p class="comment-content">Ngắn gọn, nhưng em vẫn được cung cấp những thông tin cần thiết. Cảm ơn thầy nhiều!</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="3744978741811268494" href="javascript:;">Trả lời</a><span class="item-control blog-admin blog-admin pid-1244155240"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=3277552449392957334&amp;postID=3744978741811268494">Xóa</a></span></span></div><div class="comment-replies"><div id="c3744978741811268494-rt" class="comment-thread inline-thread"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Trả lời</a></span></span><ol id="c3744978741811268494-ra" class="thread-chrome thread-expanded"><div><li class="comment" id="c2681071501976049877"><div class="avatar-image-container"><img src="./Viết bài báo, luận văn bằng Latex_files/TuanNguyenAvatar.jpg" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/06053647193431759845" rel="nofollow">Dr. Tuan A. Nguyen</a></cite><span class="icon user blog-author"></span><span class="datetime secondary-text"><a rel="nofollow" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html?showComment=1357747117373#c2681071501976049877">lúc 22:58 9 tháng 1, 2013</a></span></div><p class="comment-content">Cám ơn em đã thích. Thực ra có rất nhiều bài viết chi tiết về LaTex, tôi chỉ ghi ra những ý chính, khẩu quyết thôi. Còn đi chi tiết thì có Dr Google giúp rồi. Quan trọng là truyền được lửa đam mê, có đam mê rồi thì các khó khăn còn lại sẽ dễ dàng được giải quyết ! </p><span class="comment-actions secondary-text"><span class="item-control blog-admin blog-admin pid-1036028542"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=3277552449392957334&amp;postID=2681071501976049877">Xóa</a></span></span></div><div class="comment-replies"><div id="c2681071501976049877-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Trả lời</a></span></span><ol id="c2681071501976049877-ra" class="thread-chrome thread-expanded"><div></div><div id="c2681071501976049877-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2681071501976049877" href="javascript:;">Trả lời</a></div></ol></div></div><div class="comment-replybox-single" id="c2681071501976049877-ce"></div></li></div><div id="c3744978741811268494-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="3744978741811268494" href="javascript:;">Trả lời</a></div></ol></div></div><div class="comment-replybox-single" id="c3744978741811268494-ce"></div></li><li class="comment" id="c1448697602114712992"><div class="avatar-image-container"><img src="./Viết bài báo, luận văn bằng Latex_files/blogger_logo_round_35.png" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/14871085366838087857" rel="nofollow">Unknown</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html?showComment=1376837511139#c1448697602114712992">lúc 21:51 18 tháng 8, 2013</a></span></div><p class="comment-content">Dễ hiểu và có hứng thú lắm thầy ạ.Rất cám ơn cách truyền đam mê của thầy đến tụi em ^^</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="1448697602114712992" href="javascript:;">Trả lời</a><span class="item-control blog-admin blog-admin pid-540163561"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=3277552449392957334&amp;postID=1448697602114712992">Xóa</a></span></span></div><div class="comment-replies"><div id="c1448697602114712992-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Trả lời</a></span></span><ol id="c1448697602114712992-ra" class="thread-chrome thread-expanded"><div></div><div id="c1448697602114712992-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="1448697602114712992" href="javascript:;">Trả lời</a></div></ol></div></div><div class="comment-replybox-single" id="c1448697602114712992-ce"></div></li><li class="comment" id="c1506759223750194507"><div class="avatar-image-container"><img src="./Viết bài báo, luận văn bằng Latex_files/IMG_0039.JPG" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/02628804938644420127" rel="nofollow">hanguyenf</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html?showComment=1393588630741#c1506759223750194507">lúc 18:57 28 tháng 2, 2014</a></span></div><p class="comment-content">Em cảm ơn bài viết và những tài liệu Thầy đã chia sẻ!</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="1506759223750194507" href="javascript:;">Trả lời</a><span class="item-control blog-admin blog-admin pid-683754750"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=3277552449392957334&amp;postID=1506759223750194507">Xóa</a></span></span></div><div class="comment-replies"><div id="c1506759223750194507-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Trả lời</a></span></span><ol id="c1506759223750194507-ra" class="thread-chrome thread-expanded"><div></div><div id="c1506759223750194507-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="1506759223750194507" href="javascript:;">Trả lời</a></div></ol></div></div><div class="comment-replybox-single" id="c1506759223750194507-ce"></div></li><li class="comment" id="c624287390895914208"><div class="avatar-image-container"><img src="./Viết bài báo, luận văn bằng Latex_files/blogger_logo_round_35.png" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/06753678531400429150" rel="nofollow">Unknown</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html?showComment=1414166477607#c624287390895914208">lúc 23:01 24 tháng 10, 2014</a></span></div><p class="comment-content">Thầy ơi, em muốn tạo một bảng nằm ngang với chiều trang giấy là chiều đứng, nghĩa là xoay 1 bảng 90 độ thì làm thế nào ạ. Em mong thầy giúp đỡ. Em xin cảm ơn ạ !</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="624287390895914208" href="javascript:;">Trả lời</a><span class="item-control blog-admin blog-admin pid-592384210"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=3277552449392957334&amp;postID=624287390895914208">Xóa</a></span></span></div><div class="comment-replies"><div id="c624287390895914208-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Trả lời</a></span></span><ol id="c624287390895914208-ra" class="thread-chrome thread-expanded"><div></div><div id="c624287390895914208-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="624287390895914208" href="javascript:;">Trả lời</a></div></ol></div></div><div class="comment-replybox-single" id="c624287390895914208-ce"></div></li><li class="comment" id="c5357569394523889962"><div class="avatar-image-container"><img src="./Viết bài báo, luận văn bằng Latex_files/blogger_logo_round_35.png" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/05961823301265757147" rel="nofollow">Unknown</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html?showComment=1461570350379#c5357569394523889962">lúc 14:45 25 tháng 4, 2016</a></span></div><p class="comment-content">Mỗi lần xem lại vẫn thấy hay hay.<br>Cảm ơn Thầy nhiều.<br>Em góp thêm ở phần build ra được file pdf ở phần 2, Phải có file vietnam.ldf trong thư mục UITThesis. Download tại đây http://www.revathi.in/symsssss/root/usr/local/share/texmf-dist/tex/latex/vietnam/vietnam.ldf<br><br>Trân trọng.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="5357569394523889962" href="javascript:;">Trả lời</a><span class="item-control blog-admin blog-admin pid-2085144554"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=3277552449392957334&amp;postID=5357569394523889962">Xóa</a></span></span></div><div class="comment-replies"><div id="c5357569394523889962-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Trả lời</a></span></span><ol id="c5357569394523889962-ra" class="thread-chrome thread-expanded"><div></div><div id="c5357569394523889962-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="5357569394523889962" href="javascript:;">Trả lời</a></div></ol></div></div><div class="comment-replybox-single" id="c5357569394523889962-ce"></div></li><li class="comment" id="c4340062828035303929"><div class="avatar-image-container"><img src="./Viết bài báo, luận văn bằng Latex_files/blogger_logo_round_35.png" alt=""></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="https://www.blogger.com/profile/05377718522413538421" rel="nofollow">Unknown</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://tuanubicom.blogspot.com/2012/10/writinginlatex.html?showComment=1491986468135#c4340062828035303929">lúc 15:41 12 tháng 4, 2017</a></span></div><p class="comment-content">Dịch vụ làm luận văn thạc sĩ thuê giá rẻ:<br>http://lamluanvan.com</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="4340062828035303929" href="javascript:;">Trả lời</a><span class="item-control blog-admin blog-admin pid-1743561050"><a target="_self" href="https://www.blogger.com/delete-comment.g?blogID=3277552449392957334&amp;postID=4340062828035303929">Xóa</a></span></span></div><div class="comment-replies"><div id="c4340062828035303929-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self" href="javascript:;">Trả lời</a></span></span><ol id="c4340062828035303929-ra" class="thread-chrome thread-expanded"><div></div><div id="c4340062828035303929-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="4340062828035303929" href="javascript:;">Trả lời</a></div></ol></div></div><div class="comment-replybox-single" id="c4340062828035303929-ce"></div></li></ol><div id="top-continue" class="continue hidden"><a class="comment-reply" target="_self" href="javascript:;">Thêm nhận xét</a></div><div class="comment-replybox-thread" id="top-ce"><iframe allowtransparency="allowtransparency" class="blogger-iframe-colorize blogger-comment-from-post" frameborder="0" height="80px" id="comment-editor" name="comment-editor" src="./Viết bài báo, luận văn bằng Latex_files/3277552449392957334.html" width="100%" style="display: block;" data-resized="true"></iframe></div><div class="loadmore hidden" data-post-id="3703677968946293052"><a target="_self">Tải thêm...</a></div></div>
+</div>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<h4 id="comment-post-message">Đăng nhận xét</h4>
+<a href="https://www.blogger.com/comment/frame/3277552449392957334?po=3703677968946293052&amp;hl=vi&amp;skin=emporio&amp;blogspotRpcToken=7186518" id="comment-editor-src"></a>
+
+<script src="./Viết bài báo, luận văn bằng Latex_files/976584016-comment_from_post_iframe.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+<p></p>
+</section>
+</article>
+</div>
+</div></div>
+</main>
+<div class="vertical-ad-container no-items section" id="ads" name="Quảng cáo">
+</div>
+<aside class="sidebar-container container" role="complementary">
+<div class="section" id="sidebar_item" name="Sidebar (Item Page)"><div class="widget PopularPosts" data-version="2" id="PopularPosts1">
+<h3 class="title">
+Bài đăng phổ biến
+</h3>
+<div class="widget-content">
+<div role="feed">
+<article class="post" role="article">
+<div class="item-thumbnail">
+<a href="https://tuanubicom.blogspot.com/2021/07/WhyHowUni.html">
+<img alt="Hình ảnh" src="./Viết bài báo, luận văn bằng Latex_files/SV tham dự hội thảo.jpeg" srcset="https://1.bp.blogspot.com/-QqapTnIvTx8/YQT-4uSmzSI/AAAAAAAAcag/6Cm-rvdeNL871asr3x6wowsZvokYDU3TwCLcBGAsYHQ/w280/SV%2Btham%2Bdu%25CC%259B%25CC%25A3%2Bho%25CC%25A3%25CC%2582i%2Btha%25CC%2589o.jpeg 280w, https://1.bp.blogspot.com/-QqapTnIvTx8/YQT-4uSmzSI/AAAAAAAAcag/6Cm-rvdeNL871asr3x6wowsZvokYDU3TwCLcBGAsYHQ/w560/SV%2Btham%2Bdu%25CC%259B%25CC%25A3%2Bho%25CC%25A3%25CC%2582i%2Btha%25CC%2589o.jpeg 560w, https://1.bp.blogspot.com/-QqapTnIvTx8/YQT-4uSmzSI/AAAAAAAAcag/6Cm-rvdeNL871asr3x6wowsZvokYDU3TwCLcBGAsYHQ/w840/SV%2Btham%2Bdu%25CC%259B%25CC%25A3%2Bho%25CC%25A3%25CC%2582i%2Btha%25CC%2589o.jpeg 840w, https://1.bp.blogspot.com/-QqapTnIvTx8/YQT-4uSmzSI/AAAAAAAAcag/6Cm-rvdeNL871asr3x6wowsZvokYDU3TwCLcBGAsYHQ/w1120/SV%2Btham%2Bdu%25CC%259B%25CC%25A3%2Bho%25CC%25A3%25CC%2582i%2Btha%25CC%2589o.jpeg 1120w, https://1.bp.blogspot.com/-QqapTnIvTx8/YQT-4uSmzSI/AAAAAAAAcag/6Cm-rvdeNL871asr3x6wowsZvokYDU3TwCLcBGAsYHQ/w1400/SV%2Btham%2Bdu%25CC%259B%25CC%25A3%2Bho%25CC%25A3%25CC%2582i%2Btha%25CC%2589o.jpeg 1400w">
+</a>
+</div>
+<h3 class="post-title"><a href="https://tuanubicom.blogspot.com/2021/07/WhyHowUni.html">WHY: Tại tôi sao cần học đại học?  💓+🏄+🌏+💡+💎+👫   </a></h3>
+<div class="item-content">
+<div class="popular-posts-snippet snippet-container r-snippet-container">
+<div class="snippet-item r-snippetized">
+Chúng ta đang đứng trước một trong những thách thức chưa từng có của xã hội loài người khi bị tấn công liên tiếp bởi đại dịch, thiên tai, biến đổi khí hậu. Đại dịch COVID-19 đã đánh gãy chuỗi cung ứng toàn cầu khiến mọi hoạt động sản xuất kinh doanh đến học tập, vui chơi, giải trí, và các mặt khác của xã hội đã bị đình trệ. Tuy nhiên với sự phát triển của công nghệ sản xuất vaccine và thuốc chữa bệnh, tôi tin rằng đại dịch sẽ sớm bị đẩy lùi để mọi thứ trở lại trạng thái bình thường mới. Có thể loài người sẽ không tiêu diệt được hoàn toàn virus COVID-19, nhưng khi chiến dịch tiêm vaccine thành công thì sẽ tiến đến viễn cảnh là COVID-19 sẽ trở thành một bệnh thường kỳ như cúm mùa và không phải là một mối đe dọa lớn nữa.&nbsp; Cuộc sống vẫn luôn tiếp diễn và chúng ta không thụ động chờ đợi mà vẫn luôn rèn luyện, phát triển, tích lũy tri thức và sức khỏe để khi trạng thái bình thường trở lại, chúng ta sẽ bắt nhịp ngay được với thời cuộc. Một trong những đầu tư mang lại giá trị cao nhất đó là đầ
+</div>
+<a class="snippet-fade r-snippet-fade" href="https://tuanubicom.blogspot.com/2021/07/WhyHowUni.html"></a>
+</div>
+</div>
+</article>
+<article class="post" role="article">
+<div class="item-thumbnail">
+<a href="https://tuanubicom.blogspot.com/2020/03/learntobe.html">
+<img alt="Hình ảnh" src="./Viết bài báo, luận văn bằng Latex_files/love14.png" srcset="https://1.bp.blogspot.com/-nTt9GVtLj-8/XmMC65U26LI/AAAAAAAAS7Q/JtfpAfjgF7gJBvsJvuesvKgRH0s2nKeSwCLcBGAsYHQ/w280/love14.png 280w, https://1.bp.blogspot.com/-nTt9GVtLj-8/XmMC65U26LI/AAAAAAAAS7Q/JtfpAfjgF7gJBvsJvuesvKgRH0s2nKeSwCLcBGAsYHQ/w560/love14.png 560w, https://1.bp.blogspot.com/-nTt9GVtLj-8/XmMC65U26LI/AAAAAAAAS7Q/JtfpAfjgF7gJBvsJvuesvKgRH0s2nKeSwCLcBGAsYHQ/w840/love14.png 840w, https://1.bp.blogspot.com/-nTt9GVtLj-8/XmMC65U26LI/AAAAAAAAS7Q/JtfpAfjgF7gJBvsJvuesvKgRH0s2nKeSwCLcBGAsYHQ/w1120/love14.png 1120w, https://1.bp.blogspot.com/-nTt9GVtLj-8/XmMC65U26LI/AAAAAAAAS7Q/JtfpAfjgF7gJBvsJvuesvKgRH0s2nKeSwCLcBGAsYHQ/w1400/love14.png 1400w">
+</a>
+</div>
+<h3 class="post-title"><a href="https://tuanubicom.blogspot.com/2020/03/learntobe.html">Học làm người: chìa khóa để thành công!  </a></h3>
+<div class="item-content">
+<div class="popular-posts-snippet snippet-container r-snippet-container">
+<div class="snippet-item r-snippetized">
+ Thân chào các bạn học sinh, sinh viên,       Chúng ta đang sống trong một thế giới thay đổi vô cùng nhanh chóng, đầy những bất ngờ. B iến đổi khí hậu, thiên tai dịch bệnh đã không còn là chuyện ở đâu xa vời nữa, nó đang diễn ra ngay cạnh chúng ta, tại nhiều quốc gia trên thế giới. Về mặt khoa học kỹ thuật, nghề nghiệp hay sự phát triển của công nghệ đã và đang làm thay đổi gần như là đột phá về mọi mặt. Do đó, để thành công trong cuộc sống đầy thay đổi, ta cần phải làm gì, học nghề gì?&nbsp;     Bản chất của thành công và thất bại nó không nằm ở nghề, mà nằm ở chính con người hành nghề đó. Sau nhiều năm đi dạy học, đọc sách, nghiên cứu, cũng như trải nghiệm trong cuộc sống, tôi nhận ra rằng cái đầu tiên các bạn cần phải học đó là học làm người. Nhưng đây không phải một con người bình thường, mà là con người với thân, tâm, và ý luôn được rèn luyện mài dũa hằng ngày. Thế thì ta rèn luyện những đức tính gì để thành công?       Đầu tiên, đó là    Tình yêu &amp; Lòng biết ơn     Tình yêu là một
+</div>
+<a class="snippet-fade r-snippet-fade" href="https://tuanubicom.blogspot.com/2020/03/learntobe.html"></a>
+</div>
+</div>
+</article>
+<article class="post" role="article">
+<div class="item-thumbnail">
+<a href="https://tuanubicom.blogspot.com/2020/06/sapiensreview.html">
+<img alt="Hình ảnh" src="./Viết bài báo, luận văn bằng Latex_files/LSLN.jpg" srcset="https://1.bp.blogspot.com/-Fid776kp83c/XumawSU6nNI/AAAAAAAAUjg/mQHrsh8ksdYpxWKZJsCcD7cXDhcOfO8dACK4BGAsYHg/w280/LSLN.jpg 280w, https://1.bp.blogspot.com/-Fid776kp83c/XumawSU6nNI/AAAAAAAAUjg/mQHrsh8ksdYpxWKZJsCcD7cXDhcOfO8dACK4BGAsYHg/w560/LSLN.jpg 560w, https://1.bp.blogspot.com/-Fid776kp83c/XumawSU6nNI/AAAAAAAAUjg/mQHrsh8ksdYpxWKZJsCcD7cXDhcOfO8dACK4BGAsYHg/w840/LSLN.jpg 840w, https://1.bp.blogspot.com/-Fid776kp83c/XumawSU6nNI/AAAAAAAAUjg/mQHrsh8ksdYpxWKZJsCcD7cXDhcOfO8dACK4BGAsYHg/w1120/LSLN.jpg 1120w, https://1.bp.blogspot.com/-Fid776kp83c/XumawSU6nNI/AAAAAAAAUjg/mQHrsh8ksdYpxWKZJsCcD7cXDhcOfO8dACK4BGAsYHg/w1400/LSLN.jpg 1400w">
+</a>
+</div>
+<h3 class="post-title"><a href="https://tuanubicom.blogspot.com/2020/06/sapiensreview.html">Cảm nhận về sách Sapiens</a></h3>
+<div class="item-content">
+<div class="popular-posts-snippet snippet-container r-snippet-container">
+<div class="snippet-item r-snippetized">
+Gần đây GS sử học Harari nổi lên như một hiện tượng. Các tác phẩm của ông như Sapiens: Lược sử loài người, Homodeus (người thần thánh), 21 bài học cho thế kỷ 21 được dịch ra hơn 40 thứ tiếng và xuất bản toàn cầu. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Điều gì đã làm nên hiện tượng này? Trong bài phỏng vấn của tạp chí Times, ông khiêm tốn nói rằng ông chỉ biết có mỗi viết sách, còn sự nổi tiếng đó là do cả một tập thể, đội ngũ Marketing, PR, truyền thông đằng sau ông làm nên. Tuy nhiên, nếu bạn đã đọc Sapiens thì khó có thể dừng lại vì cách kể chuyện lôi cuốn của ông. Quyển sách chia làm 4 phần: 1) Cách mạng nhận thức, 2) Cách mạng nông nghiệp, 3) Sự thống nhất của loài người, 4) Cách mạng khoa học Con người luôn không ngừng tò mò về nguồn gốc lịch sử của mình, chúng ta từ đâu đến và sẽ đi về đâu. Tác giả đã dày công tìm hiểu các dữ liệu về nguồn gốc loài người từ hàng triệu năm trước qua các hóa thạch và qua các di sản văn hóa, khảo cổ học tìm được của loài người hiện đại cách đây 6
+</div>
+<a class="snippet-fade r-snippet-fade" href="https://tuanubicom.blogspot.com/2020/06/sapiensreview.html"></a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div></div>
+</aside>
+<!-- close sidebar-container -->
+<div class="dim-overlay hidden"></div></div>
+<!-- close centered-bottom -->
+</div>
+<!-- close centered -->
+</div>
+<!-- close page_body -->
+<footer class="footer section" id="footer" name="Chân trang"><div class="widget Attribution" data-version="2" id="Attribution1">
+<div class="widget-content">
+<div class="blogger">
+<a href="https://www.blogger.com/" rel="nofollow">
+<svg class="svg-icon-24">
+<use xlink:href="/responsive/sprite_v1_6.css.svg#ic_post_blogger_black_24dp" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+Được tạo bởi Blogger
+</a>
+</div>
+</div>
+</div></footer>
+</div>
+<script type="text/javascript" src="./Viết bài báo, luận văn bằng Latex_files/545202431-vegeclub_compiled.js.download" async="true"></script>
+
+<script type="text/javascript" src="./Viết bài báo, luận văn bằng Latex_files/1163011050-widgets.js.download"></script>
+<script type="text/javascript">
+window['__wavt'] = 'AOuZoY5omD6SqWxHgmDsT-VBhFB3k0W4IA:1678807560641';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d3277552449392957334','//tuanubicom.blogspot.com/2012/10/writinginlatex.html','3277552449392957334');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '3277552449392957334', 'title': 'H\u1ea1nh ph\xfac l\xe0 tr\u1ea3i nghi\u1ec7m trong cu\u1ed9c h\xe0nh tr\xecnh', 'url': 'https://tuanubicom.blogspot.com/2012/10/writinginlatex.html', 'canonicalUrl': 'https://tuanubicom.blogspot.com/2012/10/writinginlatex.html', 'homepageUrl': 'https://tuanubicom.blogspot.com/', 'searchUrl': 'https://tuanubicom.blogspot.com/search', 'canonicalHomepageUrl': 'https://tuanubicom.blogspot.com/', 'blogspotFaviconUrl': 'https://tuanubicom.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'vi', 'localeUnderscoreDelimited': 'vi', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22H\u1ea1nh ph\xfac l\xe0 tr\u1ea3i nghi\u1ec7m trong cu\u1ed9c h\xe0nh tr\xecnh - Atom\x22 href\x3d\x22https://tuanubicom.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22H\u1ea1nh ph\xfac l\xe0 tr\u1ea3i nghi\u1ec7m trong cu\u1ed9c h\xe0nh tr\xecnh - RSS\x22 href\x3d\x22https://tuanubicom.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22H\u1ea1nh ph\xfac l\xe0 tr\u1ea3i nghi\u1ec7m trong cu\u1ed9c h\xe0nh tr\xecnh - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/3277552449392957334/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22H\u1ea1nh ph\xfac l\xe0 tr\u1ea3i nghi\u1ec7m trong cu\u1ed9c h\xe0nh tr\xecnh - Atom\x22 href\x3d\x22https://tuanubicom.blogspot.com/feeds/3703677968946293052/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/c5a749d7a56ef555', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Nh\u1eadn \u0111\u01b0\u1eddng li\xean k\u1ebft', 'key': 'link', 'shareMessage': 'Nh\u1eadn \u0111\u01b0\u1eddng li\xean k\u1ebft', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Chia s\u1ebb v\u1edbi Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Chia s\u1ebb v\u1edbi Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Chia s\u1ebb v\u1edbi Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27vi\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': '\u0110\u1ecdc th\xeam', 'pageType': 'item', 'postId': '3703677968946293052', 'postImageThumbnailUrl': 'http://3.bp.blogspot.com/-afbjZgxFM7g/UIKeINVl0UI/AAAAAAAABlQ/xriDG9XzTu4/s72-c/LaTeX_Logo.png', 'postImageUrl': 'http://3.bp.blogspot.com/-afbjZgxFM7g/UIKeINVl0UI/AAAAAAAABlQ/xriDG9XzTu4/s1600/LaTeX_Logo.png', 'pageName': 'Vi\u1ebft b\xe0i b\xe1o, lu\u1eadn v\u0103n b\u1eb1ng Latex ', 'pageTitle': 'H\u1ea1nh ph\xfac l\xe0 tr\u1ea3i nghi\u1ec7m trong cu\u1ed9c h\xe0nh tr\xecnh: Vi\u1ebft b\xe0i b\xe1o, lu\u1eadn v\u0103n b\u1eb1ng Latex '}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Ch\u1ec9nh s\u1eeda', 'linkCopiedToClipboard': '\u0110\xe3 sao ch\xe9p \u0111\u01b0\u1eddng li\xean k\u1ebft v\xe0o b\u1ea3ng nh\u1edb t\u1ea1m!', 'ok': 'Ok', 'postLink': 'Li\xean k\u1ebft b\xe0i \u0111\u0103ng'}}, {'name': 'template', 'data': {'name': 'Emporio', 'localizedName': 'Emporio', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': false, 'variant': 'vegeclub_light', 'variantId': 'vegeclub_light'}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Vi\u1ebft b\xe0i b\xe1o, lu\u1eadn v\u0103n b\u1eb1ng Latex ', 'description': '     Latex l\xe0 m\u1ed9t ng\xf4n ng\u1eef \u0111\u1ecbnh d\u1ea1ng v\u0103n b\u1ea3n d\xf9ng \u0111\u1ec3 sinh ra t\xe0i li\u1ec7u ph\u1ee5c v\u1ee5 xu\u1ea5t b\u1ea3n, in \u1ea5n. Latex \u0111\u1eb7c bi\u1ec7t \u0111\u01b0\u1ee3c s\u1eed d\u1ee5ng r\u1ed9ng r\xe3i trong gi...', 'featuredImage': '//3.bp.blogspot.com/-afbjZgxFM7g/UIKeINVl0UI/AAAAAAAABlQ/xriDG9XzTu4/s1600/LaTeX_Logo.png', 'url': 'https://tuanubicom.blogspot.com/2012/10/writinginlatex.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 3703677968946293052}}, {'name': 'widgets', 'data': [{'title': 'H\u1ea1nh ph\xfac l\xe0 tr\u1ea3i nghi\u1ec7m trong cu\u1ed9c h\xe0nh tr\xecnh (Ti\xeau \u0111\u1ec1)', 'type': 'Header', 'sectionId': 'header', 'id': 'Header1'}, {'title': 'T\xecm ki\u1ebfm Blog n\xe0y', 'type': 'BlogSearch', 'sectionId': 'search_top', 'id': 'BlogSearch1'}, {'title': '', 'type': 'FeaturedPost', 'sectionId': 'featured_post', 'id': 'FeaturedPost1', 'postId': '1797147178366574097'}, {'title': 'B\xe0i \u0111\u0103ng tr\xean Blog', 'type': 'Blog', 'sectionId': 'page_body', 'id': 'Blog1', 'posts': [{'id': '3703677968946293052', 'title': 'Vi\u1ebft b\xe0i b\xe1o, lu\u1eadn v\u0103n b\u1eb1ng Latex ', 'featuredImage': '//3.bp.blogspot.com/-afbjZgxFM7g/UIKeINVl0UI/AAAAAAAABlQ/xriDG9XzTu4/s1600/LaTeX_Logo.png', 'showInlineAds': false}], 'headerByline': {'regionName': 'header1', 'items': [{'name': 'timestamp', 'label': ''}, {'name': 'share', 'label': ''}]}, 'footerBylines': [{'regionName': 'footer1', 'items': [{'name': 'comments', 'label': 'nh\u1eadn x\xe9t'}, {'name': 'icons', 'label': ''}]}, {'regionName': 'footer2', 'items': [{'name': 'labels', 'label': ''}]}, {'regionName': 'footer3', 'items': [{'name': 'location', 'label': 'Google Account Video Purchases'}]}], 'allBylineItems': [{'name': 'timestamp', 'label': ''}, {'name': 'share', 'label': ''}, {'name': 'comments', 'label': 'nh\u1eadn x\xe9t'}, {'name': 'icons', 'label': ''}, {'name': 'labels', 'label': ''}, {'name': 'location', 'label': 'Google Account Video Purchases'}]}, {'title': 'Gi\u1edbi thi\u1ec7u v\u1ec1 t\xf4i', 'type': 'Profile', 'sectionId': 'sidebar_feed', 'id': 'Profile1'}, {'title': '', 'type': 'BlogArchive', 'sectionId': 'sidebar_feed', 'id': 'BlogArchive1'}, {'title': 'Nh\xe3n', 'type': 'Label', 'sectionId': 'sidebar_feed', 'id': 'Label1'}, {'title': '', 'type': 'ReportAbuse', 'sectionId': 'sidebar_feed', 'id': 'ReportAbuse1'}, {'type': 'PopularPosts', 'sectionId': 'sidebar_item', 'id': 'PopularPosts1', 'posts': [{'title': 'WHY: T\u1ea1i t\xf4i sao c\u1ea7n h\u1ecdc \u0111\u1ea1i h\u1ecdc?  \ud83d\udc93+\ud83c\udfc4+\ud83c\udf0f+\ud83d\udca1+\ud83d\udc8e+\ud83d\udc6b   ', 'id': 1797147178366574097}, {'title': 'H\u1ecdc l\xe0m ng\u01b0\u1eddi: ch\xeca kh\xf3a \u0111\u1ec3 th\xe0nh c\xf4ng!  ', 'id': 2952912774390084516}, {'title': 'C\u1ea3m nh\u1eadn v\u1ec1 s\xe1ch Sapiens', 'id': 7055818470734281181}]}, {'type': 'Attribution', 'sectionId': 'footer', 'id': 'Attribution1'}]}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogSearchView', new _WidgetInfo('BlogSearch1', 'search_top', document.getElementById('BlogSearch1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FeaturedPostView', new _WidgetInfo('FeaturedPost1', 'featured_post', document.getElementById('FeaturedPost1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'page_body', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/3764221515-lbx__vi.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/77523928-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar_feed', document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar_feed', document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': '\u0110ang t\u1ea3i\x26hellip;'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar_feed', document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ReportAbuseView', new _WidgetInfo('ReportAbuse1', 'sidebar_feed', document.getElementById('ReportAbuse1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar_item', document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'footer', document.getElementById('Attribution1'), {}, 'displayModeFull'));
+</script>
+
+<div class="dim-overlay hidden" id="subscribe-dim-overlay"></div><div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div><iframe id="nr-ext-rsicon" style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;" src="./Viết bài báo, luận văn bằng Latex_files/saved_resource(2).html"></iframe><link type="text/css" rel="stylesheet" href="./Viết bài báo, luận văn bằng Latex_files/77523928-lightbox_bundle.css"><script type="text/javascript" src="./Viết bài báo, luận văn bằng Latex_files/3764221515-lbx__vi.js.download"></script></body></html>

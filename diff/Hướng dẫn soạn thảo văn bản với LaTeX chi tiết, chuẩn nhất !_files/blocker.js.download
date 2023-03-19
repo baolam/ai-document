@@ -1,0 +1,2 @@
+jQuery(document).ready(function($){if($("#kiemblocker").height()>1){console.log("Cảm ơn bạn đã không sử dụng blocker!");$("#tbblocker").html("");$("#tbblocker").css("display","none")}else{$("#thongbaob").html("<div "+mau+" id='tbblocker'><div class='tattbblock'><button "+nut+" id='butontat'>&times;</button></div><div>"+hinh+"</div><div class='noidungblocker'>"+noi+"</div></div>")}
+$("#butontat").click(function(){$("#tbblocker").css("display","none")})})
