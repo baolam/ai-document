@@ -28,7 +28,7 @@ class Observe extends EventEmitter {
 			// r = cmd.runSync("git checkout -b main");
 			// console.log(r.data);
 			console.log("Lệnh 5");
-			r = cmd.runSync("git pull --rebase");
+			r = cmd.runSync("git pull --rebase origin main");
 			console.log(r.data);
 			/// Tiến hành push
 			console.log("Lệnh 5");
