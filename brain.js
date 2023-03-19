@@ -21,14 +21,14 @@ class Observe extends EventEmitter {
 			r = cmd.runSync('git commit -am "updating automatically from service" ');
 			console.log(r.data);
 			/// Tiến hành remote đến target
-			console.log("Lệnh 3");
-			r = cmd.runSync("git remote add origin https://github.com/baolam/ai-document.git");
-			console.log(r.data);
-			console.log("Lệnh 4");
-			r = cmd.runSync("git checkout -b main");
-			console.log(r.data);
+			// console.log("Lệnh 3");
+			// r = cmd.runSync("git remote add origin https://github.com/baolam/ai-document.git");
+			// console.log(r.data);
+			// console.log("Lệnh 4");
+			// r = cmd.runSync("git checkout -b main");
+			// console.log(r.data);
 			console.log("Lệnh 5");
-			r = cmd.runSync("git pull https://github.com/baolam/ai-document.git main");
+			r = cmd.runSync("git pull --rebase");
 			console.log(r.data);
 			/// Tiến hành push
 			console.log("Lệnh 5");
